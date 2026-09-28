@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>回線スピードテスト|Ping・ダウンロード速度を無料で測定</title>
+<meta name="description" content="ブラウザだけでかんたんに回線速度を測定。ダウンロード速度・Ping・ゆらぎを数秒でチェックでき、動画視聴やビデオ会議に十分かの目安と、測定履歴も確認できます。">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0b7a9e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%230b7a9e'/%3E%3Cpath d='M106 312A150 150 0 0 1 406 312' fill='none' stroke='%23fff' stroke-width='44' stroke-linecap='round'/%3E%3Cpath d='M256 312L322 201' stroke='%23e8a317' stroke-width='30' stroke-linecap='round'/%3E%3Ccircle cx='256' cy='312' r='34' fill='%23e8a317'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFK0lEQVR42r2XSWzVVRTGf+f+hzf1QSkUobYFgpaIJhBj6rxQDITEKETYaGJCgIUaTTSEwc1LVwwhDkFMjKgLh0BIjBgDkYiwYEFAoyWgrSBIUdQ2UFre+B/ucfFqA9KWorVn/93vu+d+55x7BIBcztDWZjMb3r0Fx38FMU9gozmoCmMRIopxO1H7OXHwWmHj6j//5hRyamgTm16/Y6F4/rvies0ahRBHjGk4LuJ6aBR2aRisLm5atZ+cGgHIbPhggaRSX2kYQlSJQQwiMqYCVBXU4iYc8Ty0VHqssHHFAal58b16zZrvcZzpRIFFjMP/GWpjXN8Qx7/LFTvfaEbWSCLZMC7kAGIcosBKItmgGVljEJZrFCoYYdzCiEahIix3EZlFHIEwfgIEU+WUWS6ows2TC1ehFPRfOtO9GXIBjKmmKoyV2NpqhYnBcwQFrNWbESPuqMtYhMgq+WIFVMmmk0xKJgHoL4f0FcogQjrh4xoh1tHJGJUAxwhXygHZpM+yebN5/I5mWpunUl9TFdCTL3P0fDdfnDzH/p+6uFIOyaaSxPbGIiTz6vt6I/L+QoVHWm7lraUPMfeW2hEP7Oi1vPDpYb7+oYMJaf+GIkbMgGsMfYUyzz98F28++QDuVZV6rjfPmUv9AMyqyzJzUhbiIk2d69l3byMv1z3M24ePMzGdIBpBhDsyeYmn72lh+9IHsQOHHPr5ApsPtnOkq5vLpQCASUnD3bPn8vqcYzS0b6M4ZS7bl73E5XKFT452MLEmRTRg2FEJMCKUgpA7GyazfelDxKqIwLq9R9l6sB2rStp3ySY8HLH0hx5nTh0kFW3iUl0r0xfvxWqC7Uvuo/23Hk719JHwXOwQxjTDCQjCmLWPzqc25eOIsONoJ1v2HaMm6TEh5eMYMMREVnANfHjbbqbV+Dx+fAkfnMhjRKhNJVn7yHyCMMYMM9vM9aMbKlHM1NoMC29vRBW68yVy+78hlU1RnWmWovXpi1Pkoxpy0/bwYPokz51/hp8qM9jy5SG68yVUYWFLI1NrM1SimKE0mKFuXw4jWhvrmZZNIQK72s/wx6U8vuOAWoo2wfxUFztnvMNns1/npSkH2HHxUT66eD91qQq/9pbY1X4GEZiWTdHaWE85jIbMwvUZQCC2tDbVY1Wxqhw5140YAyiBOkz3LvNx8w6eqv2WBTU/0m+TvNGzANeEqIIYw5Fz3YP41qZ6iO2Q48YMVwWe62BEMCK01E9ErcURpaI+81Lnmelf5HxYx8W4hgmmTJPfS6QOItUnaqmfOIj33OGn/HUCrCqe77Lzu9N09vTR2dPHnhNn8XyXyEJCAtpLTfwSTOZWr5fp7mV+CydxstxAQkIiC57vsufE2UH8zu9O4/lDV8GQnVBEqIQRad8DoBCEJD0XVcWggx5YN3UfAJu7F/N9qZm0qWARZMBHmQF8MQhJDOBH3YpFBDvQPIwx14ANSlF9YjUDg8qSlgB71RuPhB9VJ1TVQdf+E2wR0hIgogPfAbmG/Eb4fwoY9kMy0hipEo78lRjFQFYDMo5/wesf2qB6FsdVFDtuvIqtcupZg7JbXE/A6vjd3Kq4nqDsNlLQrVopX8D1DWrj///21cVEK+ULUtCtJr9tZQ/Ks+L5gptwUBuPaNv/spqpjaurmS8oz+a3rewx5NQUNq44YIv5RaBdksw4uN7YG9P1RJIZB7TLFvOLChtXHCCnxtAmllzOFDet2k9UadUw2ALSMVjkY7WeIx0aBluIKq3VzThnaBP7FyRncm6zVplUAAAAAElFTkSuQmCC" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="スピードテスト">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="回線スピードテスト|Ping・ダウンロード速度を無料で測定">
+<meta property="og:description" content="ダウンロード速度・Ping・ゆらぎをブラウザだけで測定。用途の目安や履歴も確認できます。">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"回線スピードテスト","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (Web browser)","inLanguage":"ja","description":"ダウンロード速度・Ping・ゆらぎをブラウザで測定し、用途の目安と測定履歴を表示する無料の回線速度テスト。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Pingとは何ですか?","acceptedAnswer":{"@type":"Answer","text":"通信の応答時間(ミリ秒)です。小さいほど反応が速く、オンラインゲームやビデオ会議の快適さに影響します。"}},{"@type":"Question","name":"測定値が実際の回線速度と違うのはなぜですか?","acceptedAnswer":{"@type":"Answer","text":"本ツールはCDNのファイルの読み込み時間から求める目安値です。Wi-Fiの電波状況、同時に使っている端末、時間帯、測定先のサーバーによって差が出ます。"}},{"@type":"Question","name":"測定するときのコツはありますか?","acceptedAnswer":{"@type":"Answer","text":"ほかのダウンロードや動画視聴を止め、ルーターの近くで、時間をあけて複数回測定すると安定した値が得られます。"}}]}]}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Barlow+Condensed:wght@500;600&display=swap">
+<style>
+:root{--bg:#e8eeee;--panel:#fff;--sunk:#e9eff0;--ink:#10242e;--sub:#5b6f78;--line:#d5dfe1;--acc:#0b7a9e;--acc2:#e8a317;--onacc:#fff;--shadow:0 1px 2px rgba(16,36,46,.06),0 8px 24px rgba(16,36,46,.06);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1418;--panel:#111e25;--sunk:#0b171c;--ink:#e3eef1;--sub:#8ba0a9;--line:#22343d;--acc:#4cc3e6;--acc2:#f2b93b;--onacc:#06222c;--shadow:none}}
+:root[data-theme="dark"]{--bg:#0a1418;--panel:#111e25;--sunk:#0b171c;--ink:#e3eef1;--sub:#8ba0a9;--line:#22343d;--acc:#4cc3e6;--acc2:#f2b93b;--onacc:#06222c;--shadow:none}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:1000px;margin:0 auto;padding:20px 16px 40px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+h1{font-size:19px;font-weight:700;margin:0;letter-spacing:.02em}
+h2{font-size:14px;font-weight:700;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center}
+button{font:inherit;cursor:pointer;color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.icon{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:6px 12px;font-size:13px}
+.grid{display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:start}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.meter{padding:24px 24px 0}
+.gauge{width:100%;max-width:440px;margin:0 auto;display:block}
+.gauge text{fill:var(--sub);font-size:12px;font-family:"Barlow Condensed",sans-serif}
+#arc{transition:stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1)}
+#nd{transform-origin:200px 200px;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.read{text-align:center;margin-top:-4px}
+.read b{display:block;font-family:"Barlow Condensed","Zen Kaku Gothic New",sans-serif;font-weight:600;font-size:76px;line-height:1;font-variant-numeric:tabular-nums}
+.read span{color:var(--sub);font-size:13px}
+.track{height:4px;background:var(--sunk);border-radius:2px;margin:16px auto 8px;max-width:440px;overflow:hidden}
+#prog{height:100%;width:0;background:var(--acc);transition:width .3s}
+#st{text-align:center;color:var(--sub);font-size:13px;min-height:22px}
+.go{display:block;margin:12px auto 22px;min-width:220px;padding:14px 28px;border:0;border-radius:999px;background:var(--acc);color:var(--onacc);font-size:16px;font-weight:700;cursor:pointer;transition:transform .15s cubic-bezier(.2,.8,.2,1),box-shadow .15s ease,filter .15s ease;animation:goPulse 2.2s ease-in-out infinite}
+.go:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 6px 16px color-mix(in srgb,var(--acc) 35%,transparent)}
+.go:active{transform:translateY(0) scale(.95);filter:brightness(.97)}
+.go:disabled{opacity:.55;cursor:default;animation:none;transform:none;box-shadow:none}
+@keyframes goPulse{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--acc) 35%,transparent)}50%{box-shadow:0 0 0 8px transparent}}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.strip div{padding:14px 8px;text-align:center}
+.strip div+div{border-left:1px solid var(--line)}
+.strip b{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:28px;line-height:1.1}
+.strip span{font-size:12px;color:var(--sub)}
+.sec{padding:18px 20px}
+.sec+.sec{border-top:1px solid var(--line)}
+.set{display:grid;grid-template-columns:5.5em 1fr;gap:10px 8px;align-items:center;font-size:13px}
+.set>span{color:var(--sub)}
+.seg{display:flex;background:var(--sunk);border-radius:10px;padding:3px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{flex:1;text-align:center;padding:6px 4px;border-radius:8px;font-size:13px;cursor:pointer;white-space:nowrap}
+.seg input:checked+label{background:var(--panel);font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.seg input:focus-visible+label{outline:2px solid var(--acc)}
+.grade{font-size:22px;font-weight:700;color:var(--acc);margin:0}
+.desc{font-size:14px;margin:2px 0 0}
+.empty{color:var(--sub);font-size:13px;margin:0}
+dl{margin:12px 0 0;font-size:13px}
+dl div{display:flex;justify-content:space-between;padding:6px 0;border-top:1px solid var(--line)}
+dt{color:var(--sub)}dd{margin:0;font-weight:500}
+.mini{border:1px solid var(--line);background:transparent;border-radius:8px;padding:3px 10px;font-size:12px;color:var(--sub)}
+#gr svg{width:100%;height:80px;display:block}
+.sum{font-size:12px;color:var(--sub);margin:4px 0 8px}
+#hist{list-style:none;margin:0;padding:0;font-size:13px;font-variant-numeric:tabular-nums}
+#hist li{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;padding:7px 0;border-top:1px solid var(--line)}
+#hist .t{color:var(--sub)}
+#hist .g{color:var(--acc)}
+dialog{border:1px solid var(--line);border-radius:18px;padding:0;background:var(--panel);color:var(--ink);width:min(640px,94vw);max-height:92vh;overflow:hidden}
+dialog[open]{display:flex;flex-direction:column}
+dialog::backdrop{background:rgba(6,20,26,.55)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}
+.dopt{display:flex;gap:18px;flex-wrap:wrap;padding:10px 18px;font-size:13px;border-bottom:1px solid var(--line)}
+.dopt label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.dbody{flex:1;min-height:0;overflow:auto;padding:16px;background:var(--sunk)}
+.df{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-top:1px solid var(--line);font-size:13px;color:var(--sub)}
+.btn{border:0;border-radius:10px;padding:9px 18px;background:var(--acc);color:var(--onacc);font-weight:700;font-size:14px}
+.btn:disabled{opacity:.55;cursor:default}
+.paper{width:560px;margin:0 auto;background:#fff;color:#10242e;padding:32px;font-size:13px;line-height:1.6;font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+.paper h3{margin:0;font-size:20px}
+.paper .pm{margin:2px 0 18px;color:#5b6f78}
+.paper .pk{display:flex;border:1px solid #d5dfe1;border-radius:12px;margin-bottom:14px}
+.paper .pk div{flex:1;padding:14px 8px;text-align:center}
+.paper .pk div+div{border-left:1px solid #d5dfe1}
+.paper .pk b{display:block;font-size:30px;line-height:1.1;color:#0b7a9e;font-family:"Barlow Condensed",sans-serif}
+.paper .pk span{font-size:11px;color:#5b6f78}
+.paper h4{margin:16px 0 4px;font-size:13px}
+.paper table{width:100%;border-collapse:collapse}
+.paper td,.paper th{padding:5px 4px;border-top:1px solid #d5dfe1;text-align:left;font-weight:400}
+.paper th{color:#5b6f78}
+.paper td:nth-child(n+3),.paper td:last-child{text-align:right}
+.paper .ft{margin-top:18px;font-size:11px;color:#5b6f78}
+.faq{margin-top:28px}
+.faq details{border-top:1px solid var(--line);padding:10px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:14px}
+.faq p{font-size:13px;color:var(--sub);margin:6px 0 0;max-width:70ch}
+.note{font-size:12px;color:var(--sub);margin:16px 4px 0}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.in{animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes ring{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--acc) 45%,transparent)}100%{box-shadow:0 0 0 18px transparent}}
+.go.run{animation:ring 1.4s ease-out infinite}
+@keyframes sheen{from{background-position:200% 0}to{background-position:-200% 0}}
+#prog.run{background:linear-gradient(90deg,var(--acc) 30%,color-mix(in srgb,var(--acc) 40%,#fff) 50%,var(--acc) 70%);background-size:200% 100%;animation:sheen 1.2s linear infinite}
+@keyframes flash{from{background:color-mix(in srgb,var(--acc) 22%,transparent)}to{background:transparent}}
+#hist li.new{animation:flash 1.6s ease-out}
+@media (prefers-reduced-motion:reduce){#arc,#nd,#prog{transition:none}.in,.go,.go.run,#prog.run,#hist li.new{animation:none;transition:none}}
+.btn.sub{background:var(--sunk);color:var(--ink);border:1px solid var(--line)}
+.dfb{display:flex;gap:8px}
+#hist{max-height:280px;overflow:auto}
+.dfb{flex-wrap:wrap;justify-content:flex-end}
+#s_pd{margin:0 0 8px}
+.paper .lv{font-weight:700}
+#hist li{grid-template-columns:1fr auto auto auto auto auto;align-items:center}
+#hist .mm,#hist .xx{padding:0 6px;font-size:11px}
+#hist .mo{grid-column:1/-1;font-size:12px;color:var(--sub);display:none}
+.tod{display:grid;grid-template-columns:6.5em 1fr auto;gap:4px 8px;align-items:center;font-size:12px;margin-bottom:8px}
+.tod small{color:var(--sub);font-weight:400}
+.tod b{font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.tod .bar{background:var(--sunk);border-radius:4px;height:8px;overflow:hidden}
+.tod i{display:block;height:100%;background:var(--acc);border-radius:4px}
+@page{size:A4;margin:14mm}
+@media print{
+html,body{background:#fff!important;padding:0!important}
+body>*:not(#pv){display:none!important}
+#pv,#pv[open]{display:block!important;position:static!important;width:auto!important;max-width:none!important;max-height:none!important;border:0!important;border-radius:0!important;background:#fff!important;overflow:visible!important;box-shadow:none!important}
+#pv::backdrop{display:none}
+#pv .dh,#pv .dopt,#pv .df{display:none!important}
+#pv .dbody{padding:0!important;background:#fff!important;overflow:visible!important}
+#pv .paper{width:100%!important;max-width:none!important;zoom:1!important;padding:0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.paper .pk,.paper tr,.paper h4{break-inside:avoid;page-break-inside:avoid}
+.paper h4{break-after:avoid}
+}
+@property --n{syntax:"<integer>";inherits:false;initial-value:0}
+#boot{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;overflow:hidden;background:radial-gradient(circle at 50% 42%,color-mix(in srgb,var(--acc) 20%,var(--bg)),var(--bg) 68%);color:var(--ink);transition:opacity .4s ease,visibility .4s,transform .4s}
+#boot.off{opacity:0;visibility:hidden;pointer-events:none;transform:scale(1.04)}
+#boot::before{content:"";position:absolute;inset:-40px;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px;opacity:.5;-webkit-mask-image:radial-gradient(circle at 50% 45%,#000,transparent 70%);mask-image:radial-gradient(circle at 50% 45%,#000,transparent 70%);animation:bootgrid 4s linear infinite}
+#boot::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--acc),transparent);opacity:.5;animation:bootscan 2.4s ease-in-out infinite}
+#boot>*{position:relative}
+#boot svg{width:240px;height:auto;overflow:visible}
+#boot .bk{fill:none;stroke:var(--sub);stroke-width:5;stroke-dasharray:.5 2.5;opacity:.6}
+#boot .bt{fill:none;stroke:var(--line);stroke-width:12;stroke-linecap:round}
+#boot .ba{fill:none;stroke:url(#bootg);stroke-width:12;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;filter:drop-shadow(0 0 5px var(--acc));animation:bootarc 1.8s cubic-bezier(.5,0,.2,1) infinite}
+#boot .g1{stop-color:var(--acc)}#boot .g2{stop-color:var(--acc2)}
+#boot .bn{transform-origin:100px 100px;animation:bootneedle 1.8s cubic-bezier(.5,0,.2,1) infinite;filter:drop-shadow(0 0 4px var(--acc2))}
+#boot .bn line{stroke:var(--acc2);stroke-width:4;stroke-linecap:round}
+#boot .bn circle{fill:var(--bg);stroke:var(--acc2);stroke-width:4}
+#boot .bv{margin:-6px 0 0;display:flex;align-items:baseline;gap:6px;font-family:"Barlow Condensed",sans-serif;font-weight:600}
+#boot .bv b{font-size:44px;line-height:1;min-width:2.2ch;text-align:right;font-variant-numeric:tabular-nums;animation:bootnum 1.8s cubic-bezier(.5,0,.2,1) infinite;counter-reset:n var(--n)}
+#boot .bv b::after{content:counter(n)}
+#boot .bv small{font-size:14px;color:var(--sub);letter-spacing:.12em}
+#boot .bl{margin:6px 0 0;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:15px;letter-spacing:.42em;padding-left:.42em;color:var(--acc)}
+#boot .bm{font-size:13px;color:var(--sub);letter-spacing:.08em;margin:0;animation:bootpulse 1.4s ease-in-out infinite}
+#boot .bp{width:160px;height:3px;margin-top:10px;border-radius:2px;background:var(--sunk);overflow:hidden}
+#boot .bp i{display:block;height:100%;width:40%;border-radius:2px;background:linear-gradient(90deg,var(--acc),var(--acc2));animation:bootbar 1.2s ease-in-out infinite}
+@keyframes bootarc{0%{stroke-dashoffset:100}55%,70%{stroke-dashoffset:29}100%{stroke-dashoffset:100}}
+@keyframes bootneedle{0%{transform:rotate(-90deg)}55%,70%{transform:rotate(38deg)}100%{transform:rotate(-90deg)}}
+@keyframes bootnum{0%{--n:0}55%,70%{--n:186}100%{--n:0}}
+@keyframes bootgrid{to{transform:translate(40px,40px)}}
+@keyframes bootscan{0%,100%{top:18%;opacity:0}50%{top:78%;opacity:.55}}
+@keyframes bootpulse{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes bootbar{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
+@media (prefers-reduced-motion:reduce){#boot,#boot.off{transition:none}#boot::before,#boot::after,#boot .bm,#boot .bp i,#boot .bv b{animation:none}#boot .ba{animation:none;stroke-dashoffset:35}#boot .bn{animation:none;transform:rotate(-20deg)}#boot .bv b{--n:140}}
+
+/* ===== Responsive: PC / Tablet / Phone ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+button,.seg label,summary{touch-action:manipulation}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{gap:10px;flex-wrap:wrap}
+header>div{flex-wrap:wrap}
+h2{gap:8px;flex-wrap:wrap}
+dd{text-align:right;min-width:0;overflow-wrap:anywhere}
+dl div{gap:12px}
+dt{flex:none}
+.read b{font-size:clamp(56px,16vw,76px)}
+dialog{max-height:92vh;max-height:92dvh}
+.seg{flex-wrap:wrap}
+.seg label{min-width:3.2em}
+
+/* PC (wide) */
+@media (min-width:1100px){
+  .wrap{max-width:1180px;padding-top:28px}
+  .grid{gap:24px}
+  .grid>.panel:first-child{position:sticky;top:20px}
+  #hist{max-height:340px}
+}
+@media (min-width:1600px){
+  .wrap{max-width:1320px}
+  h1{font-size:22px}
+}
+@media (min-width:821px){
+  .grid>.panel:first-child{position:sticky;top:16px}
+}
+
+/* Tablet */
+@media (min-width:601px) and (max-width:820px){
+  .wrap{max-width:760px}
+  .grid{gap:16px}
+  .set{grid-template-columns:5.5em 1fr 5.5em 1fr;gap:12px 10px}
+  .meter{padding-top:28px}
+  .gauge{max-width:480px}
+  #hist{max-height:none}
+}
+
+/* Phone */
+@media (max-width:600px){
+  .wrap{padding-top:14px;padding-bottom:calc(28px + env(safe-area-inset-bottom,0px))}
+  header{margin-bottom:12px}
+  h1{font-size:17px;flex:1 1 auto}
+  header>div{width:100%;justify-content:flex-end}
+  .meter{padding:18px 14px 0}
+  .go{width:100%;min-width:0;max-width:360px;min-height:52px}
+  .strip div{padding:12px 4px}
+  .strip b{font-size:24px}
+  .strip span{font-size:11px}
+  .sec{padding:16px 14px}
+  .set{grid-template-columns:1fr;gap:4px}
+  .set>span{margin-top:8px;font-size:12px}
+  .set>span:first-child{margin-top:0}
+  #hist{max-height:none}
+  #hist li{grid-template-columns:1fr auto auto auto auto;gap:6px 10px}
+  #hist li>span:nth-child(2){display:none}
+  .tod{grid-template-columns:5.5em 1fr auto}
+  .faq summary{padding:4px 0}
+  .note{margin:14px 2px 0}
+  dialog{width:100vw;max-width:100vw;height:100vh;height:100dvh;max-height:100dvh;border:0;border-radius:0;margin:0}
+  .dh{padding:12px 14px;padding-top:calc(12px + env(safe-area-inset-top,0px))}
+  .dopt{padding:10px 14px;gap:10px 16px}
+  .dbody{padding:10px}
+  .df{flex-direction:column;align-items:stretch;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+  .dfb{justify-content:stretch}
+  .dfb .btn{flex:1 1 30%}
+}
+@media (max-width:360px){
+  .strip b{font-size:21px}
+  .seg label{font-size:12px;padding:6px 2px;min-width:2.8em}
+}
+
+/* Phone landscape */
+@media (orientation:landscape) and (max-height:520px){
+  .wrap{padding-top:10px}
+  header{margin-bottom:8px}
+  .grid{grid-template-columns:1fr 1fr;gap:14px}
+  .grid>.panel:first-child{position:static}
+  .gauge{max-width:260px}
+  .read b{font-size:52px}
+  .meter{padding:12px 14px 0}
+  .go{margin:8px auto 14px;width:auto;min-width:200px;min-height:44px}
+  .set{grid-template-columns:5.5em 1fr;gap:8px}
+  dialog{width:min(640px,94vw);height:auto;max-height:100dvh;border:1px solid var(--line);border-radius:12px}
+  .df{flex-direction:row;align-items:center;padding-bottom:10px}
+}
+
+/* Touch devices: bigger hit areas, no sticky hover, no iOS input zoom */
+@media (pointer:coarse){
+  .icon,.mini,.btn{min-height:40px}
+  .mini,#hist .mm,#hist .xx{padding-left:12px;padding-right:12px}
+  .seg label{padding-top:10px;padding-bottom:10px}
+  .faq summary{padding:8px 0}
+  #plan,#hist input{font-size:16px!important;min-height:40px}
+  .dopt label{min-height:40px}
+  .go:hover{transform:none;filter:none;box-shadow:none}
+}
+@media (hover:none){.go:hover{transform:none;filter:none}}
+
+/* ===== Features: share / charts / alerts / UX ===== */
+[hidden]{display:none!important}
+.banner{margin:0 0 14px;padding:10px 14px;border-radius:12px;font-size:13px;cursor:pointer;border:1px solid var(--line);background:var(--panel)}
+#alb{border-color:#d64545;color:#d64545;font-weight:700}
+#sb{border-color:var(--acc)}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:14px;padding:10px 14px;border-radius:12px;background:var(--ink);color:var(--bg);font-size:13px;max-width:92vw}
+#toast button{border:0;background:transparent;color:var(--acc2);font-weight:700;padding:6px 8px}
+#fab{display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;min-width:200px;min-height:48px;padding:12px 26px;border:0;border-radius:999px;background:var(--acc);color:var(--onacc);font-weight:700;font-size:15px;box-shadow:0 6px 20px rgba(0,0,0,.28)}
+#fab:disabled{opacity:.6}
+@media (max-width:820px){#fab.on{display:block}.wrap{padding-bottom:96px}#toast{bottom:calc(76px + env(safe-area-inset-bottom,0px))}}
+#s_gv{margin:8px 0}
+#cmp svg{width:100%;height:auto;display:block}
+#cmp text{fill:var(--sub);font-size:9px;font-family:"Barlow Condensed",sans-serif}
+#grr{min-height:1.6em;margin:6px 0 0}
+dialog.sheet{width:min(420px,94vw);height:auto}
+.shl{display:grid;gap:8px;padding:14px 18px 18px}
+.shl .btn{text-align:left;padding:12px 14px;min-height:44px}
+.kb{padding:12px 18px 18px;margin:0}
+kbd{border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 8px;background:var(--sunk);font:inherit;font-size:12px}
+@media (max-width:600px){dialog.sheet{width:100%;max-width:100%;height:auto;max-height:80dvh;margin:auto 0 0;border-radius:18px 18px 0 0}}
+@media (pointer:coarse){#kbb{display:none}}
+@media (prefers-reduced-motion:reduce){#fab,#toast{transition:none}}
+</style>
+</head>
+<body>
+<noscript><style>#boot{display:none}</style></noscript>
+<div id="boot" role="status" aria-live="polite" aria-label="Loading">
+<svg viewBox="0 0 200 120" aria-hidden="true"><defs><linearGradient id="bootg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" class="g1"/><stop offset="1" class="g2"/></linearGradient></defs><path class="bk" pathLength="60" d="M12 100A88 88 0 0 1 188 100"/><path class="bt" d="M25 100A75 75 0 0 1 175 100"/><path class="ba" pathLength="100" d="M25 100A75 75 0 0 1 175 100"/><g class="bn"><line x1="100" y1="100" x2="100" y2="40"/><circle cx="100" cy="100" r="9"/></g></svg>
+<p class="bv" aria-hidden="true"><b></b><small>Mbps</small></p>
+<p class="bl" aria-hidden="true">SPEED TEST</p>
+<p class="bm" id="bootmsg">読み込み中…</p>
+<div class="bp" aria-hidden="true"><i></i></div>
+</div>
+<script>
+(function(){var m=document.getElementById("bootmsg");try{if(localStorage.getItem("spd_lang")==="en")m.textContent="Loading…"}catch(e){}})();
+</script>
+<div class="wrap">
+<header><h1>回線スピードテスト</h1><div style="display:flex;gap:8px"><button class="icon" id="lg" aria-label="Language">English</button><button class="icon" id="mt" aria-pressed="false">効果音 オン</button><button class="icon" id="th" aria-label="テーマを切り替える">ライト / ダーク</button></div></header>
+<div id="sb" class="banner" hidden></div>
+<div id="alb" class="banner" role="alert" hidden title="タップで閉じる"></div>
+<div class="grid">
+<section class="panel" aria-label="測定">
+  <div class="meter">
+    <svg class="gauge" viewBox="0 0 400 215" aria-hidden="true">
+      <path d="M50 200A150 150 0 0 1 350 200" fill="none" stroke="var(--sunk)" stroke-width="16" stroke-linecap="round"/>
+      <path id="arc" d="M50 200A150 150 0 0 1 350 200" fill="none" stroke="var(--acc)" stroke-width="16" stroke-linecap="round" stroke-dasharray="471.24" stroke-dashoffset="471.24"/>
+      <g id="tk"></g>
+      <g id="nd"><line x1="200" y1="200" x2="200" y2="78" stroke="var(--acc2)" stroke-width="4" stroke-linecap="round"/></g>
+      <circle cx="200" cy="200" r="9" fill="var(--panel)" stroke="var(--acc2)" stroke-width="4"/>
+    </svg>
+    <div class="read" aria-live="polite"><b id="dl">—</b><span id="ul">Mbps ダウンロード</span></div>
+    <div class="track"><div id="prog"></div></div>
+    <div id="st">「測定を開始」を押してください</div>
+    <div id="rg" style="max-width:440px;margin:0 auto"></div>
+    <button class="go" id="go">測定を開始</button>
+    <button class="mini" id="stp" style="display:none;margin:-12px auto 20px">測定を中止</button>
+  </div>
+  <div class="strip">
+    <div><b id="ping">—</b><span>Ping (ms)</span></div>
+    <div><b id="jit">—</b><span>ゆらぎ (ms)</span></div>
+    <div><b id="ref">—</b><span>端末推定 (Mbps)</span></div>
+  </div>
+</section>
+<aside class="panel">
+  <div class="sec">
+    <h2>接続情報<button class="mini" id="ipb">非表示</button></h2>
+    <dl style="margin:0">
+      <div><dt>IPアドレス</dt><dd id="ip">取得中…</dd></div>
+      <div><dt>回線種別の推定</dt><dd id="ety">—</dd></div>
+      <div><dt>回線事業者</dt><dd><a id="isp" target="_blank" rel="noopener noreferrer" style="display:none;color:var(--acc)">ipinfo.ioで調べる</a><span id="ispn">—</span></dd></div>
+    </dl>
+  </div>
+  <div class="sec">
+    <h2>設定</h2>
+    <div class="set">
+      <span>測定モード</span><div class="seg" id="s_mode" role="radiogroup" aria-label="測定モード"></div>
+      <span>接続の種類</span><div class="seg" id="s_tag" role="radiogroup" aria-label="接続の種類"></div>
+      <span>連続測定</span><div class="seg" id="s_rep" role="radiogroup" aria-label="連続測定"></div>
+      <span>表示単位</span><div class="seg" id="s_un" role="radiogroup" aria-label="表示単位"></div>
+      <span>測定先</span><div class="seg" id="s_src" role="radiogroup" aria-label="測定先"></div>
+      <span>自動測定</span><div class="seg" id="s_auto" role="radiogroup" aria-label="自動測定"></div>
+      <span>低下警告</span><div class="seg" id="s_alt" role="radiogroup" aria-label="速度低下の警告しきい値(Mbps)"></div>
+      <span>通知</span><div class="seg" id="s_nt" role="radiogroup" aria-label="完了・警告の通知"></div>
+      <span>画面維持</span><div class="seg" id="s_wk" role="radiogroup" aria-label="定期測定中に画面を消さない"></div>
+      <span>契約速度</span><div><input type="number" id="plan" min="0" step="any" inputmode="decimal" placeholder="例: 1000" aria-label="契約速度(Mbps)" style="width:7em;font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:8px;background:var(--sunk);color:var(--ink)"> Mbps</div>
+      <span>目標速度</span><div class="seg" id="s_goal" role="radiogroup" aria-label="目標速度(Mbps)"></div>
+    </div>
+    <p class="sum" id="ai" role="status" style="margin:10px 0 0"></p>
+  </div>
+  <div class="sec">
+    <h2>結果<span style="display:flex;gap:6px"><button class="mini" id="shb" style="display:none">共有</button><button class="mini" id="pvb" style="display:none">PDF・プレビュー</button><button class="mini" id="cp" style="display:none">結果をコピー</button></span></h2>
+    <div id="vd"><p class="empty">測定すると、用途の目安とダウンロード時間がここに表示されます。</p></div>
+    <div id="pl"></div>
+    <dl id="est"></dl>
+    <div id="use"></div>
+    <div id="adv"></div>
+    <details id="ued" style="margin-top:10px;font-size:13px"><summary style="cursor:pointer;color:var(--sub)">用途別の必要速度を編集</summary><div id="uef" style="margin-top:8px"></div></details>
+  </div>
+  <div class="sec">
+    <h2>測定履歴<span style="display:flex;gap:6px"><button class="mini" id="csv">CSVで保存</button><button class="mini" id="clr">履歴を消去</button></span></h2>
+    <div style="display:flex;gap:6px;margin:0 0 10px;flex-wrap:wrap"><button class="mini" id="bkx">バックアップ書き出し</button><button class="mini" id="bki">読み込み</button><input type="file" id="bkf" accept="application/json,.json" hidden></div>
+    <div class="seg" id="s_pd" role="radiogroup" aria-label="表示期間"></div>
+    <div class="sum" id="sum"></div>
+    <div class="seg" id="s_gv" role="radiogroup" aria-label="グラフ表示"></div>
+    <div id="gr"></div>
+    <div id="cmp"></div>
+    <p class="sum" id="grr" role="status"></p>
+    <div id="tod"></div>
+    <ul id="hist"></ul>
+  </div>
+</aside>
+</div>
+<section class="faq" aria-labelledby="faqh">
+  <h2 id="faqh">回線速度テストのよくある質問</h2>
+  <details><summary>Pingとは何ですか?</summary><p>通信の応答時間(ミリ秒)です。小さいほど反応が速く、オンラインゲームやビデオ会議の快適さに影響します。ゆらぎは、Pingのばらつきを表します。</p></details>
+  <details><summary>測定値が実際の回線速度と違うのはなぜですか?</summary><p>このツールはCDNのファイルの読み込み時間から求める目安値です。Wi-Fiの電波状況、同時に使っている端末、時間帯、測定先のサーバーによって差が出ます。</p></details>
+  <details><summary>測定するときのコツはありますか?</summary><p>ほかのダウンロードや動画視聴を止め、ルーターの近くで、時間をあけて複数回測定すると安定した値が得られます。「精密」モードや連続測定も使えます。</p></details>
+  <details><summary>速度はどれくらいあれば十分ですか?</summary><p>目安は、10 Mbps以上でHD動画とビデオ会議、25 Mbps以上で4K動画やオンラインゲーム、100 Mbps以上で大容量ダウンロードや複数人での同時利用です。</p></details>
+</section>
+<dialog id="shd" class="sheet" aria-labelledby="sht">
+  <div class="dh"><b id="sht">共有</b><button class="mini" data-a="z">閉じる</button></div>
+  <div class="shl"><button class="btn sub" data-a="n" id="sh_n">端末の共有メニュー</button><button class="btn sub" data-a="x">Xに投稿</button><button class="btn sub" data-a="l">LINEで送る</button><button class="btn sub" data-a="c">リンクをコピー</button><button class="btn sub" data-a="i">画像・PDFで保存</button></div>
+</dialog>
+<dialog id="kbd" class="sheet" aria-labelledby="kbt">
+  <div class="dh"><b id="kbt">ショートカット一覧</b><button class="mini" id="kbc">閉じる</button></div>
+  <dl class="kb"><div><dt>測定を開始</dt><dd><kbd>S</kbd></dd></div><div><dt>測定を中止</dt><dd><kbd>Esc</kbd></dd></div><div><dt>効果音のオン/オフ</dt><dd><kbd>M</kbd></dd></div><div><dt>テーマ切替</dt><dd><kbd>T</kbd></dd></div><div><dt>結果をコピー</dt><dd><kbd>C</kbd></dd></div><div><dt>PDF・プレビュー</dt><dd><kbd>P</kbd></dd></div><div><dt>グラフ切替</dt><dd><kbd>G</kbd></dd></div><div><dt>この一覧</dt><dd><kbd>?</kbd></dd></div></dl>
+</dialog>
+<button id="fab" type="button">測定を開始</button>
+<div id="toast" role="status" hidden></div>
+<dialog id="pv" aria-labelledby="pvt">
+  <div class="dh"><b id="pvt">PDFプレビュー</b><button class="mini" id="pvc">閉じる</button></div>
+  <div class="dopt"><label><input type="checkbox" id="pvh" checked> 履歴を含める</label><label><input type="checkbox" id="pvi"> IPアドレスを含める</label></div>
+  <div class="dbody" id="dbody"><div class="paper" id="paper"></div></div>
+  <div class="df"><span id="pvm" role="status"></span><div class="dfb"><button class="btn sub" id="pvg">画像で保存</button><button class="btn sub" id="pvp">印刷</button><button class="btn" id="pvs">PDFを保存</button></div></div>
+</dialog>
+<p class="note">CDN(jsDelivr・cdnjs)のファイルの読み込み速度から求めた値(中央値)です。測定では通信量を数十MB使うため、モバイル回線では注意してください。アップロード速度は測定できません。ショートカット: Sキーで測定開始、Mキーで効果音のオン/オフ。 <button class="mini" id="kbb" type="button">ショートカット一覧</button></p>
+</div>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var BIG="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+  var SMALL="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js";
+  var FB=140000,KEY="spd_hist",ARCL=Math.PI*150,last=null,busy=false,cancel=false;
+  var CFG={mode:[["3","簡易"],["5","標準"],["8","精密"]],tag:[["Wi-Fi","Wi-Fi"],["モバイル","モバイル"],["有線","有線"],["その他","その他"]],rep:[["1","1回"],["3","3回"],["5","5回"]],un:[["Mbps","Mbps"],["MB/s","MB/s"]],src:[["jsd","jsDelivr"],["cdnjs","cdnjs"],["both","併用"]],pd:[["all","全期間"],["7","7日"],["30","30日"]],alt:[["0","オフ"],["10","<10M"],["30","<30M"],["100","<100M"],["p50","契約50%"],["r30","平均-30%"]],nt:[["0","オフ"],["1","オン"]],auto:[["0","オフ"],["10","10分"],["30","30分"],["60","1時間"],["180","3時間"]],gv:[["tr","推移"],["hr","24時間"],["wd","曜日"]],wk:[["0","オフ"],["1","オン"]],goal:[["0","なし"],["30","30 M"],["100","100 M"],["500","500 M"]]};
+  var DEF={mode:1,tag:0,rep:0,un:0,goal:0,src:0,pd:0,auto:0,alt:0,nt:0,gv:0,wk:0};
+  function seg(n){var h="";CFG[n].forEach(function(o,i){h+='<input type="radio" name="'+n+'" id="'+n+i+'" value="'+o[0]+'"'+(i===DEF[n]?" checked":"")+'><label for="'+n+i+'">'+o[1]+'</label>'});$("s_"+n).innerHTML=h}
+  function v(n){return document.querySelector('input[name="'+n+'"]:checked').value}
+  function unit(){return v("un")}
+  function fmt(m){return unit()==="MB/s"?(m/8).toFixed(2):m.toFixed(1)}
+  function frac(m){return Math.min(1,Math.log10(1+Math.max(0,m))/Math.log10(1001))}
+  function gauge(m){var f=frac(m);$("arc").style.strokeDashoffset=ARCL*(1-f);$("nd").style.transform="rotate("+(-90+180*f)+"deg)"}
+  function ticks(){var h="";[0,5,25,100,300,1000].forEach(function(t){var a=Math.PI*(1-frac(t));h+='<text x="'+(200+174*Math.cos(a)).toFixed(1)+'" y="'+(200-174*Math.sin(a)).toFixed(1)+'" text-anchor="middle" dominant-baseline="middle">'+t+'</text>'});$("tk").innerHTML=h}
+  function dur(s){if(s<60)return"約"+Math.max(1,Math.round(s))+"秒";if(s<3600)return"約"+Math.round(s/60)+"分";var h=Math.floor(s/3600),m=Math.round(s%3600/60);return"約"+h+"時間"+(m?m+"分":"")}
+  function verdictOf(d){
+    if(d<3)return["ゆっくり","メールや軽いWebページ向けです。動画は途切れやすくなります。"];
+    if(d<10)return["標準","SD画質の動画や音声通話に十分です。"];
+    if(d<25)return["快適","HD動画の視聴やビデオ会議ができます。"];
+    if(d<100)return["高速","4K動画やオンラインゲームも楽しめます。"];
+    return["超高速","大容量のダウンロードや複数人での同時利用も快適です。"];
+  }
+  var USES0=[["SD動画",3],["HD動画",5],["4K動画",25],["ビデオ会議",4],["ライブ配信",6],["オンラインゲーム",15],["大容量ダウンロード",100]],LV=["不足","ぎりぎり","快適"],LC=["#d64545","var(--acc2)","var(--acc)"];
+  var USES=USES0.map(function(u){return[u[0],u[1]]});
+  try{var su=JSON.parse(localStorage.getItem("spd_uses")||"null");if(Array.isArray(su)&&su.length===USES.length)su.forEach(function(x,i){if(isFinite(x)&&x>0)USES[i][1]=+x})}catch(e){}
+  function saveUses(){try{localStorage.setItem("spd_uses",JSON.stringify(USES.map(function(u){return u[1]})))}catch(e){}}
+  function useRows(r){return USES.map(function(u){var lv=r.dl>=u[1]*1.5?2:r.dl>=u[1]?1:0,nt="";
+    if(u[0]==="オンラインゲーム"&&r.ping>=60){lv=Math.min(lv,1);nt="(Pingが高め)"}
+    if(u[0]==="ビデオ会議"&&(r.ping>=100||(r.jit||0)>=30)){lv=Math.min(lv,1);nt="(遅延・ゆらぎに注意)"}
+    return{n:u[0],need:u[1],lv:lv,nt:nt}})}
+  function renderUse(r){$("use").innerHTML='<p class="sum" style="margin-top:14px">用途別の判定(必要速度の目安)</p><dl style="margin:0">'+useRows(r).map(function(x){return"<div><dt>"+x.n+" ("+x.need+"M〜)</dt><dd style=\"color:"+LC[x.lv]+"\">"+LV[x.lv]+x.nt+"</dd></div>"}).join("")+"</dl>";}
+  function advList(r){
+    var a=[],pl=getPlan(),pc=pl?r.dl/pl*100:0,rows=useRows(r),bad=rows.filter(function(x){return x.lv===0}).map(function(x){return x.n});
+    if(r.ping>=100||(r.jit||0)>=30)a.push(["遅延が大きめです","Pingやゆらぎが高い状態です。ビデオ会議やゲームでは、有線LANへの切り替え、ルーターの再起動、ルーターの近くでの利用を試してください。"]);
+    if(bad.length)a.push(["用途に対して速度が不足しています","不足している用途: "+bad.join("、")+"。同時に使う端末やアプリを減らすか、回線プランの見直しを検討してください。"]);
+    if(pl&&pc<50)a.push(["契約速度に届いていません","測定値は契約速度の"+pc.toFixed(0)+"%です。有線接続での再測定、ルーターの再起動、時間帯を変えた測定を試してください。それでも低い場合は、事業者への相談やIPv6(IPoE)対応の回線が有効です。"]);
+    if(r.tag==="Wi-Fi"&&(r.dl<50||(pl&&pc<70)))a.push(["Wi-Fiを見直しましょう","5GHz帯(またはWi-Fi 6以降)に接続し、ルーターとの間の障害物を減らしてください。有線接続でも測ると、Wi-Fiが原因か切り分けられます。"]);
+    if(r.tag==="モバイル"&&r.dl<10)a.push(["モバイル回線は場所や時間で変わります","電波の強い場所へ移動するか、Wi-Fiへの切り替えを検討してください。混雑する時間帯を避けると改善することがあります。"]);
+    var n={s:0,c:0},o={s:0,c:0};
+    getHist().forEach(function(x){var k=new Date(x.t).getHours(),b=k>=17&&k<23?n:o;b.s+=x.dl;b.c++});
+    if(n.c>=2&&o.c>=2&&n.s/n.c<o.s/o.c*.7)a.push(["夜の速度が落ちる傾向があります","夜間の平均は、それ以外の時間帯より"+(100-n.s/n.c/(o.s/o.c)*100).toFixed(0)+"%低くなっています。回線が混み合う時間帯の影響かもしれません。IPv6(IPoE)接続への切り替えも検討してください。"]);
+    if(!a.length)a.push(["問題は見当たりません","現在の速度・応答とも良好です。さらに安定させるなら、ルーターの設置場所や定期的な再起動を見直してみてください。"]);
+    return a.slice(0,4);
+  }
+  function renderAdv(r){
+    $("adv").innerHTML='<p class="sum" style="margin-top:14px">アドバイス</p>'+advList(r).map(function(x){return'<div style="padding:8px 0;border-top:1px solid var(--line)"><b style="font-size:13px">'+esc(x[0])+'</b><p class="desc" style="font-size:13px;color:var(--sub);margin:2px 0 0">'+esc(x[1])+"</p></div>"}).join("");
+  }
+  function getPlan(){var x=parseFloat($("plan").value);return x>0&&isFinite(x)?x:0}
+  function renderPlan(r){
+    var pl=getPlan(),el=$("pl");
+    if(!pl){el.innerHTML="";return}
+    var pc=r.dl/pl*100;
+    el.innerHTML='<p class="desc" style="margin-top:8px">契約速度 '+pl+' Mbps の達成率 <b style="color:'+(pc>=50?"var(--acc)":"#d64545")+'">'+pc.toFixed(0)+'%</b>(ベストエフォートの目安)</p>';
+  }
+  function planRow(r){var pl=getPlan();return pl?'<tr><th>契約速度</th><td>'+pl+" Mbps(達成率 "+(r.dl/pl*100).toFixed(0)+"%)</td></tr>":""}
+  function cmpLine(r){
+    var hs=getHist();if(!hs.length||!(hs[0].dl>0))return"";
+    var pv=hs[0],avg=hs.reduce(function(a,x){return a+x.dl},0)/hs.length;
+    function pc(a,b){var d=(a-b)/b*100;return'<b style="color:'+(d>=0?"var(--acc)":"#d64545")+'">'+(d>=0?"+":"")+d.toFixed(1)+"%</b>"}
+    return'<p class="desc" style="margin-top:8px">前回比 '+pc(r.dl,pv.dl)+'(前回 '+fmt(pv.dl)+" "+unit()+')<br>平均比 '+pc(r.dl,avg)+'(過去'+hs.length+"件の平均 "+fmt(avg)+" "+unit()+")</p>";
+  }
+  function show(r){
+    var g=verdictOf(r.dl),p=r.ping<30?"応答は非常に良好":r.ping<80?"応答は良好":"応答はやや遅め";
+    $("vd").innerHTML='<p class="grade">'+g[0]+'</p><p class="desc">'+g[1]+'<br>'+p+'(Ping '+Math.round(r.ping)+' ms)</p>';
+    goalLine(r);$("vd").insertAdjacentHTML("beforeend",cmpLine(r));$("est").innerHTML=[["動画 100MB",100],["アプリ 1GB",1000],["ゲーム 50GB",50000]].map(function(i){return"<div><dt>"+i[0]+"</dt><dd>"+dur(i[1]*8/r.dl)+"</dd></div>"}).join("");
+    renderUse(r);renderPlan(r);renderAdv(r);
+    $("cp").style.display="";$("shb").style.display="";reveal($("use"));reveal($("adv"));reveal($("vd"));reveal($("est"));
+  }
+  var actx=null,mute=false;
+  try{mute=localStorage.getItem("spd_mute")==="1"}catch(e){}
+  function ac(){if(!actx){try{actx=new(window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(actx&&actx.state==="suspended")actx.resume();return actx}
+  function tone(f,t0,d,type,vol,f2){
+    var c=ac();if(!c||mute)return;
+    var o=c.createOscillator(),g=c.createGain(),t=c.currentTime+t0;
+    o.type=type||"sine";o.frequency.setValueAtTime(f,t);
+    if(f2)o.frequency.exponentialRampToValueAtTime(f2,t+d);
+    g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(vol||.15,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+d);
+    o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+.05);
+  }
+  var SFX={
+    start:function(){tone(300,0,.6,"sawtooth",.05,1400);tone(1400,.62,.35,"sawtooth",.04,300)},
+    tick:function(){tone(880,0,.06,"triangle",.07)},
+    click:function(){tone(1000,0,.04,"triangle",.09)},
+    off:function(){tone(500,0,.14,"sine",.1,250)},
+    ok:function(){tone(880,0,.08,"sine",.1);tone(1320,.08,.14,"sine",.1)},
+    round:function(){tone(660,0,.1,"sine",.12);tone(990,.09,.14,"sine",.12)},
+    done:function(gi){[523,659,784,1047,1319].slice(0,Math.min(5,gi+2)).forEach(function(f,i){tone(f,i*.11,.4,"sine",.14)})},
+    err:function(){tone(220,0,.25,"square",.06);tone(165,.2,.35,"square",.06)}
+  };
+  var shown=0,raf=0;
+  function tween(to){cancelAnimationFrame(raf);var from=shown,t0=performance.now(),d=matchMedia("(prefers-reduced-motion:reduce)").matches?0:800;(function f(n){var k=d?Math.min(1,(n-t0)/d):1;k=1-Math.pow(1-k,3);shown=from+(to-from)*k;$("dl").textContent=fmt(shown);if(k<1)raf=requestAnimationFrame(f)})(t0)}
+  function reveal(el){el.classList.remove("in");void el.offsetWidth;el.classList.add("in")}
+  function getHist(){try{var h=JSON.parse(localStorage.getItem(KEY)||"[]");return Array.isArray(h)?h:[]}catch(e){return[]}}
+  function save(r){try{var h=getHist();h.unshift(r);localStorage.setItem(KEY,JSON.stringify(h.slice(0,200)))}catch(e){}}
+  var T0=document.title;
+  function setTitle(s){document.title=s?L(s+" | 回線スピードテスト"):(LANG==="en"?TEN:T0)}
+  function notify(t,b){try{if(v("nt")!=="1"||!window.Notification||Notification.permission!=="granted"||!document.hidden)return;var o={body:L(b)},sw=navigator.serviceWorker;function nn(){try{new Notification(L(t),o)}catch(e){}}if(sw&&sw.getRegistration)sw.getRegistration().then(function(g){if(g&&g.showNotification)g.showNotification(L(t),o);else nn()}).catch(nn);else nn()}catch(e){}}
+  function roundGraph(a){
+    if(!a.length){$("rg").innerHTML="";return}
+    var mx=Math.max.apply(null,a),bw=300/Math.max(a.length,8),s='<svg viewBox="0 0 300 48" preserveAspectRatio="none" role="img" aria-label="ラウンド別の速度" style="width:100%;height:48px;display:block">';
+    a.forEach(function(x,i){var bh=Math.max(2,x/mx*44);s+='<rect x="'+(i*bw+2)+'" y="'+(46-bh)+'" width="'+(bw-4)+'" height="'+bh+'" rx="2" style="fill:var(--acc)"><title>'+(i+1)+"回目 "+fmt(x)+" "+unit()+"</title></rect>"});
+    $("rg").innerHTML='<p class="sum" style="text-align:center;margin:6px 0 2px">ラウンド別の速度(最高 '+fmt(mx)+" "+unit()+")</p>"+s+"</svg>";
+  }
+  function todRender(h){
+    var B=[["朝","5–11時"],["昼","11–17時"],["夜","17–23時"],["深夜","23–5時"]],a=B.map(function(){return{s:0,n:0}});
+    h.forEach(function(r){var k=new Date(r.t).getHours(),i=k>=5&&k<11?0:k>=11&&k<17?1:k>=17&&k<23?2:3;a[i].s+=r.dl;a[i].n++});
+    var av=a.map(function(x){return x.n?x.s/x.n:0}),mx=Math.max.apply(null,av);
+    if(!mx||h.length<2){$("tod").innerHTML="";$("cmp").innerHTML="";$("grr").textContent="";return}
+    $("tod").innerHTML='<p class="sum" style="margin:10px 0 4px">時間帯別の平均('+unit()+')</p><div class="tod">'+B.map(function(b,i){return a[i].n?"<span>"+b[0]+" <small>"+b[1]+'</small></span><span class="bar"><i style="width:'+Math.max(3,av[i]/mx*100)+'%"></i></span><b>'+fmt(av[i])+" <small>("+a[i].n+"件)</small></b>":""}).join("")+"</div>";
+  }
+  function inPd(r){var d=parseInt(v("pd"),10);return !d||Date.now()-r.t<=d*864e5}
+  function hist(fresh){
+    var all=getHist(),h=all.filter(inPd),ul=$("hist");ul.innerHTML="";
+    if(!all.length){$("pvb").style.display="none";$("shb").style.display="none";$("gr").innerHTML="";$("tod").innerHTML="";$("cmp").innerHTML="";$("grr").textContent="";$("sum").textContent="";ul.innerHTML='<li class="empty" style="display:block;border:0;padding:0">履歴はまだありません。測定すると自動で保存されます。</li>';return}
+    $("pvb").style.display="";$("shb").style.display="";
+    if(!h.length){$("gr").innerHTML="";$("tod").innerHTML="";$("cmp").innerHTML="";$("grr").textContent="";$("sum").textContent="";ul.innerHTML='<li class="empty" style="display:block;border:0;padding:0">この期間の履歴はありません。</li>';return}
+    var g=h.slice().reverse(),bars=g.map(function(r){return{dl:r.dl,l:stamp(r.t)+" "+fmt(r.dl)+" "+unit()}});
+    if(v("pd")!=="all"){var m={},o=[];g.forEach(function(r){var d=new Date(r.t),k=(d.getMonth()+1)+"/"+d.getDate();if(!m[k]){m[k]={s:0,n:0,k:k};o.push(m[k])}m[k].s+=r.dl;m[k].n++});bars=o.map(function(x){var a=x.s/x.n;return{dl:a,l:x.k+" 平均 "+fmt(a)+" "+unit()}})}
+    var mx=Math.max.apply(null,bars.map(function(r){return r.dl})),bw=300/Math.max(bars.length,10),s='<svg viewBox="0 0 300 80" preserveAspectRatio="none" role="img" aria-label="速度の推移">';
+    bars.forEach(function(r,i){var bh=Math.max(2,r.dl/mx*72);s+='<rect x="'+(i*bw+2)+'" y="'+(78-bh)+'" width="'+(bw-4)+'" height="'+bh+'" rx="2" style="fill:var(--acc)"><title>'+r.l+'</title></rect>'});
+    $("gr").innerHTML=s+"</svg>";todRender(h);cmpRender(h);
+    var mxd=Math.max.apply(null,g.map(function(r){return r.dl})),avg=g.reduce(function(a,r){return a+r.dl},0)/g.length;
+    $("sum").textContent="平均 "+fmt(avg)+" / 最高 "+fmt(mxd)+" "+unit()+"・"+g.length+"件"+(v("pd")!=="all"?"(日ごとの平均を表示)":"");
+    h.forEach(function(r,ix){
+      var d=new Date(r.t),li=document.createElement("li");
+      li.innerHTML='<span class="t">'+(d.getMonth()+1)+"/"+d.getDate()+" "+pad(d.getHours())+":"+pad(d.getMinutes())+'</span><span class="g">'+(r.tag||"")+"</span><span>"+fmt(r.dl)+" "+unit()+"</span><span>"+Math.round(r.ping)+' ms</span><button class="mini mm" data-t="'+r.t+'" aria-label="メモを編集">メモ</button><button class="mini xx" data-t="'+r.t+'" aria-label="この履歴を削除">×</button><div class="mo"></div>';
+      if(r.memo){var mo=li.querySelector(".mo");mo.textContent=r.memo;mo.style.display="block"}
+      if(fresh&&ix===0)li.className="new";ul.appendChild(li);
+    });
+  }
+  var JP="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js",JT="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js",CP="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js",JQJ="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js";
+  var SRCS={jsd:{dl:[JP,JT],est:[1400000,1500000],ping:JQJ},cdnjs:{dl:[CP,CP],est:[1400000,1400000],ping:SMALL},both:{dl:[JP,CP],est:[1400000,1400000],ping:SMALL}};
+  var DL=SRCS.jsd.dl,EST=SRCS.jsd.est,PU=SMALL;
+  function setSrc(){var s=SRCS[v("src")]||SRCS.jsd;DL=s.dl;EST=s.est;PU=s.ping}
+  function srcName(k){var o=CFG.src.filter(function(x){return x[0]===k})[0];return o?o[1]:"jsDelivr"}
+  function grab(url){
+    return new Promise(function(res){
+      var u=url+(url.indexOf("?")<0?"?":"&")+"t="+Date.now()+Math.random().toString(36).slice(2),l=document.createElement("link"),t0=performance.now();
+      function done(ok){var e=performance.getEntriesByName(u)[0];l.remove();res({ok:ok,wall:performance.now()-t0,e:e,url:url})}
+      l.rel="preload";l.as="script";l.href=u;l.onload=function(){done(true)};l.onerror=function(){done(false)};
+      document.head.appendChild(l);
+    });
+  }
+  function med(a){var b=a.slice().sort(function(x,y){return x-y});return b[Math.floor(b.length/2)]}
+  function sleep(ms){return new Promise(function(r){setTimeout(r,ms)})}
+  async function round(n){
+    try{performance.clearResourceTimings()}catch(e){}
+    var urls=[];for(var i=0;i<n;i++)urls.push(DL[i%DL.length]);
+    var rs=await Promise.all(urls.map(grab)),bytes=0,s=Infinity,e=0,good=0;
+    rs.forEach(function(x){var t=x.e;
+      if(x.ok&&t&&t.responseEnd>t.responseStart&&t.transferSize>0){bytes+=t.transferSize;s=Math.min(s,t.responseStart);e=Math.max(e,t.responseEnd);good++}});
+    if(good&&e>s)return{mbps:bytes*8/((e-s)/1000)/1e6};
+    var okr=rs.filter(function(x){return x.ok});
+    if(!okr.length)return null;
+    bytes=okr.reduce(function(a,x){return a+EST[DL.indexOf(x.url)]},0);
+    return{mbps:bytes*8/(Math.max.apply(null,okr.map(function(x){return x.wall}))/1000)/1e6,est:true};
+  }
+  async function pingTest(){
+    var a=[];
+    for(var i=0;i<12;i++){
+      if(cancel)throw new Error("cancel");var r=await grab(PU),t=r.e,p=(t&&t.responseStart>0&&t.requestStart>0)?t.responseStart-t.requestStart:r.wall;
+      if(i>=2)a.push(p);
+      $("prog").style.width=(i+1)/12*15+"%";SFX.tick();await sleep(60);
+    }
+    return a;
+  }
+  async function run(){
+    var b=$("go");b.disabled=true;setSrc();$("rg").innerHTML="";setTitle("測定中…");
+    $("dl").textContent="—";shown=0;$("ping").textContent="—";$("jit").textContent="—";$("prog").style.width="0";
+    b.classList.add("run");$("prog").classList.add("run");
+    gauge(1000);SFX.start();setTimeout(function(){gauge(0)},700);
+    try{
+      try{performance.setResourceTimingBufferSize(800)}catch(e){}
+      $("st").textContent="応答時間(Ping)を測定中";
+      var pa=await pingTest(),pm=med(pa);
+      var jit=pa.slice(1).reduce(function(s,x,i){return s+Math.abs(x-pa[i])},0)/Math.max(1,pa.length-1);
+      $("ping").textContent=Math.round(pm);$("jit").textContent=jit.toFixed(1);
+      $("st").textContent="接続を準備中(ウォームアップ)";
+      var w=await round(2);
+      if(!w)throw new Error("warmup");if(cancel)throw new Error("cancel");
+      var n=w.mbps>400?10:w.mbps>150?8:w.mbps>50?6:w.mbps>15?4:2;
+      var rounds=parseInt(v("mode"),10)||5,vals=[],est=!!w.est;
+      for(var k=0;k<rounds;k++){
+        if(cancel)throw new Error("cancel");$("st").textContent="ダウンロード速度を測定中 ("+(k+1)+"/"+rounds+")";
+        var r=await round(n);
+        if(r){vals.push(r.mbps);est=est||!!r.est;tween(r.mbps);gauge(r.mbps);roundGraph(vals);setTitle("測定中 "+fmt(r.mbps)+" "+unit())}
+        $("prog").style.width=(15+(k+1)/rounds*85)+"%";SFX.round();
+      }
+      if(!vals.length)throw new Error("noval");
+      var dl=med(vals);tween(dl);gauge(dl);
+      last={dl:dl,ping:pm,jit:jit,t:Date.now(),tag:v("tag"),src:v("src")};
+      var lo=Math.min.apply(null,vals),hi=Math.max.apply(null,vals);
+      $("st").textContent="測定が完了しました(中央値・ばらつき "+lo.toFixed(0)+"〜"+hi.toFixed(0)+" Mbps"+(est?"・一部推定":"")+")";
+      show(last);save(last);hist(true);
+      var th=lowTh(),low=th>0&&last.dl<th;
+      if(low){$("vd").insertAdjacentHTML("beforeend",'<p class="desc" style="margin-top:8px;color:#d64545"><b>速度低下:</b> 設定した '+th+" Mbps を下回っています</p>");SFX.err();lowAlert(th)}
+      else{lowN=0;$("alb").hidden=true;hap(30);SFX.done(last.dl<3?0:last.dl<10?1:last.dl<25?2:last.dl<100?3:4)}
+      setTitle(fmt(last.dl)+" "+unit()+"・Ping "+Math.round(last.ping)+"ms");
+      notify(low?"速度低下: "+fmt(last.dl)+" "+unit():"測定完了: "+fmt(last.dl)+" "+unit(),"Ping "+Math.round(last.ping)+" ms・ゆらぎ "+last.jit.toFixed(1)+" ms"+(low?"(しきい値 "+th+" Mbps 未満)":""));
+    }catch(e){if(e&&e.message==="cancel"){$("st").textContent="測定を中止しました";gauge(0);setTitle("");SFX.off()}else{$("st").textContent="測定に失敗しました。接続を確認して、もう一度お試しください。";SFX.err();setTitle("")}}
+    b.classList.remove("run");$("prog").classList.remove("run");
+    b.disabled=false;b.textContent="もう一度測定";
+  }
+  ["mode","tag","rep","un","goal","src","pd","auto","alt","nt","gv","wk"].forEach(seg);
+  var SK="spd_set",PS=["alt","nt","gv","wk"];
+  try{var st0=JSON.parse(localStorage.getItem(SK)||"{}");PS.forEach(function(n){var el=document.querySelector('input[name="'+n+'"][value="'+(st0[n]||"")+'"]');if(el)el.checked=true})}catch(e){}
+  ticks();hist();
+  try{var c=navigator.connection;if(c&&c.downlink)$("ref").textContent=c.downlink}catch(e){}
+  var ipVal="",ipHide=false;
+  function showIp(){
+    var a=$("isp"),ok=ipVal&&/^[0-9a-f:.]+$/i.test(ipVal);
+    a.style.display=ok?"":"none";$("ispn").style.display=ok?"none":"";
+    if(ok)a.href="https://ipinfo.io/"+ipVal;
+    $("ip").textContent=ipVal?(ipHide?ipVal.replace(/[0-9a-f]/gi,"•"):ipVal):"取得できませんでした";$("ipb").textContent=ipHide?"表示":"非表示"}
+  function findIp(){
+    try{
+      var pc=new RTCPeerConnection({iceServers:[{urls:"stun:stun.l.google.com:19302"}]});
+      pc.createDataChannel("");
+      pc.onicecandidate=function(e){
+        if(!e.candidate)return;
+        var m=/(\S+) \d+ typ srflx/.exec(e.candidate.candidate);
+        if(m&&!ipVal){ipVal=m[1];showIp();pc.close()}
+      };
+      pc.createOffer().then(function(o){return pc.setLocalDescription(o)}).catch(function(){});
+      setTimeout(function(){if(!ipVal){showIp();try{pc.close()}catch(e){}}},4000);
+    }catch(e){showIp()}
+  }
+  try{var nc=navigator.connection;$("ety").textContent=(nc&&nc.effectiveType)?nc.effectiveType.toUpperCase():"非対応のブラウザ"}catch(e){}
+  $("ipb").addEventListener("click",function(){ipHide=!ipHide;showIp()});
+  document.addEventListener("change",function(e){if(e.target.type==="radio")SFX.click()});
+  document.addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest("button"):null;if(!b)return;
+    var m={th:"click",ipb:"click",clr:"off",cp:"ok"}[b.id];if(m)SFX[m]();
+  });
+  var H2C="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js",JSP="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js",libs={};
+  function lib(u){return libs[u]||(libs[u]=new Promise(function(res,rej){var s=document.createElement("script");s.src=u;s.onload=res;s.onerror=function(){delete libs[u];rej(new Error("load"))};document.head.appendChild(s)}))}
+  function pad(n){return String(n).padStart(2,"0")}
+  function stamp(t){var d=new Date(t);return d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate()+" "+pad(d.getHours())+":"+pad(d.getMinutes())}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function report(){
+    var r=last||getHist()[0];if(!r)return"";
+    var g=verdictOf(r.dl),h='<h3>回線スピードテスト レポート</h3><p class="pm">測定日時 '+stamp(r.t)+'</p>';
+    h+='<div class="pk"><div><b>'+r.dl.toFixed(1)+'</b><span>ダウンロード (Mbps)</span></div><div><b>'+Math.round(r.ping)+'</b><span>Ping (ms)</span></div><div><b>'+(r.jit||0).toFixed(1)+'</b><span>ゆらぎ (ms)</span></div></div>';
+    h+='<p style="margin:0"><b>評価: '+g[0]+'</b><br>'+g[1]+'</p>';
+    h+='<h4>測定条件</h4><table><tr><th>接続の種類</th><td>'+esc(r.tag||"—")+'</td></tr><tr><th>測定先</th><td>'+esc(srcName(r.src||"jsd"))+'</td></tr>'+planRow(r);
+    if($("pvi").checked&&ipVal)h+='<tr><th>IPアドレス</th><td>'+esc(ipVal)+'</td></tr>';
+    h+='</table><h4>用途別の判定</h4><table>'+useRows(r).map(function(x){return"<tr><th>"+x.n+" ("+x.need+"M〜)</th><td class=\"lv\">"+LV[x.lv]+x.nt+"</td></tr>"}).join("")+'</table><h4>ダウンロード時間の目安</h4><table>'+[["動画 100MB",100],["アプリ 1GB",1000],["ゲーム 50GB",50000]].map(function(i){return"<tr><th>"+i[0]+"</th><td>"+dur(i[1]*8/r.dl)+"</td></tr>"}).join("")+"</table>";
+    if($("pvh").checked){var hs=getHist().slice(0,15);if(hs.length)h+='<h4>測定履歴(直近'+hs.length+'件)</h4><table>'+hs.map(function(x){return"<tr><td>"+stamp(x.t)+"</td><td>"+esc(x.tag||"")+"</td><td>"+x.dl.toFixed(1)+" Mbps</td><td>"+Math.round(x.ping)+" ms</td></tr>"}).join("")+"</table>"}
+    h+='<h4>アドバイス</h4>'+advList(r).map(function(x){return'<p style="margin:2px 0"><b>'+esc(x[0])+"</b><br>"+esc(x[1])+"</p>"}).join("");
+    return h+'<p class="ft">CDNのファイルの読み込み時間から求めた目安値です。実際の回線速度とは差が出ることがあります。</p>';
+  }
+  function renderPv(){var p=$("paper");p.style.zoom=1;p.innerHTML=report();p.style.zoom=Math.min(1,($("dbody").clientWidth-32)/560)}
+  function fitPv(){var d=$("pv"),p=$("paper");if(!d||!d.open||!p)return;p.style.zoom=1;p.style.zoom=Math.min(1,($("dbody").clientWidth-32)/560)}
+  window.addEventListener("resize",fitPv);window.addEventListener("orientationchange",function(){setTimeout(fitPv,200)});
+  async function saveImg(){
+    var b=$("pvg"),off=null;b.disabled=true;$("pvm").textContent="画像を作成中…";
+    try{
+      await lib(H2C);
+      off=document.createElement("div");off.className="paper";off.style.cssText="position:fixed;left:-10000px;top:0";
+      off.innerHTML=report();document.body.appendChild(off);
+      var cv=await window.html2canvas(off,{scale:2,backgroundColor:"#ffffff"});
+      var blob=await new Promise(function(r){cv.toBlob(r,"image/png")});
+      var n=new Date(),name="speedtest-"+n.getFullYear()+pad(n.getMonth()+1)+pad(n.getDate())+"-"+pad(n.getHours())+pad(n.getMinutes())+".png";
+      var dl=(window.claude&&claude.use)?await claude.use("downloads"):null;
+      if(dl){await dl.save({filename:name,data:await blob.arrayBuffer()})}
+      else{
+        var f=new File([blob],name,{type:"image/png"});
+        if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:"回線スピードテスト"})}
+        else{var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2000)}
+      }
+      $("pvm").textContent="画像を保存しました";SFX.ok();
+    }catch(e){
+      $("pvm").textContent=(e&&(e.code==="declined"||e.name==="AbortError"))?"キャンセルしました":"画像を作成できませんでした。もう一度お試しください。";
+    }finally{if(off)off.remove();b.disabled=false}
+  }
+  function printPdf(){
+    renderPv();
+    try{$("pvm").textContent="印刷ダイアログで「PDFに保存」を選ぶとPDFにできます";setTimeout(function(){window.print()},60)}
+    catch(e){$("pvm").textContent="この環境では印刷を開始できませんでした。"}
+  }
+  async function savePdf(){
+    var b=$("pvs");b.disabled=true;$("pvm").textContent="PDFを作成中…";
+    var off=null;
+    try{
+      var dl=(window.claude&&claude.use)?await claude.use("downloads"):null;
+      if(!dl){printPdf();return}
+      await Promise.all([lib(H2C),lib(JSP)]);
+      off=document.createElement("div");off.className="paper";off.style.cssText="position:fixed;left:-10000px;top:0";
+      off.innerHTML=report();document.body.appendChild(off);
+      var cv=await window.html2canvas(off,{scale:2,backgroundColor:"#ffffff"});
+      var pdf=new window.jspdf.jsPDF({unit:"mm",format:"a4"}),W=190,H=cv.height*W/cv.width;
+      if(H>277){W=W*277/H;H=277}
+      pdf.addImage(cv.toDataURL("image/jpeg",.92),"JPEG",(210-W)/2,10,W,H);
+      var n=new Date(),name="speedtest-"+n.getFullYear()+pad(n.getMonth()+1)+pad(n.getDate())+"-"+pad(n.getHours())+pad(n.getMinutes())+".pdf";
+      await dl.save({filename:name,data:pdf.output("arraybuffer")});
+      $("pvm").textContent="PDFを保存しました";SFX.ok();
+    }catch(e){
+      $("pvm").textContent=(e&&e.code==="declined")?"保存をキャンセルしました":"PDFを作成できませんでした。もう一度お試しください。";
+    }finally{if(off)off.remove();b.disabled=false}
+  }
+  $("pvb").addEventListener("click",function(){$("pvm").textContent="";$("pv").showModal();renderPv()});
+  $("pvc").addEventListener("click",function(){$("pv").close()});
+  $("pvh").addEventListener("change",renderPv);
+  $("pvi").addEventListener("change",renderPv);
+  $("pvs").addEventListener("click",savePdf);
+  $("pvg").addEventListener("click",saveImg);
+  $("pvp").addEventListener("click",function(){SFX.click();printPdf()});
+  function goalLine(r){
+    var gl=parseInt(v("goal"),10)||0;if(!gl)return;
+    var ok=r.dl>=gl;
+    $("vd").insertAdjacentHTML("beforeend",'<p class="desc" style="margin-top:8px">目標 '+gl+' Mbps: <b style="color:'+(ok?"var(--acc)":"#d64545")+'">'+(ok?"達成":"未達")+'</b>('+Math.round(r.dl/gl*100)+'%)</p>');
+  }
+  function putHist(x){try{localStorage.setItem(KEY,JSON.stringify(x))}catch(e){}}
+  function ymd(){var n=new Date();return n.getFullYear()+pad(n.getMonth()+1)+pad(n.getDate())}
+  async function outFile(name,blob){
+    var dl=(window.claude&&claude.use)?await claude.use("downloads"):null;
+    if(dl){await dl.save({filename:name,data:await blob.arrayBuffer()});return}
+    var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2000);
+  }
+  $("csv").addEventListener("click",async function(){
+    var hs=getHist();
+    if(!hs.length){$("st").textContent="保存できる履歴がありません";return}
+    function q(s){s=String(s||"");if(/^[=+\-@]/.test(s))s="'"+s;return'"'+s.replace(/"/g,'""')+'"'}
+    try{
+      var rows=[L("日時,接続の種類,ダウンロード(Mbps),Ping(ms),ゆらぎ(ms),測定先,メモ")].concat(hs.map(function(x){return[stamp(x.t),x.tag||"",x.dl.toFixed(2),Math.round(x.ping),(x.jit||0).toFixed(1),srcName(x.src||"jsd"),q(x.memo)].join(",")}));
+      await outFile("speedtest-history-"+ymd()+".csv",new Blob(["\ufeff"+rows.join("\r\n")],{type:"text/csv"}));
+      $("st").textContent="CSVを保存しました";SFX.ok();
+    }catch(e){$("st").textContent=(e&&e.code==="declined")?"保存をキャンセルしました":"CSVを保存できませんでした"}
+  });
+  $("bkx").addEventListener("click",async function(){
+    var hs=getHist();if(!hs.length){$("st").textContent="書き出せる履歴がありません";return}
+    try{await outFile("speedtest-backup-"+ymd()+".json",new Blob([JSON.stringify({app:"speedtest",v:1,hist:hs},null,1)],{type:"application/json"}));$("st").textContent="バックアップを書き出しました("+hs.length+"件)";SFX.ok()}
+    catch(e){$("st").textContent=(e&&e.code==="declined")?"保存をキャンセルしました":"バックアップを保存できませんでした"}
+  });
+  $("bki").addEventListener("click",function(){$("bkf").click()});
+  $("bkf").addEventListener("change",async function(){
+    var f=this.files&&this.files[0];this.value="";if(!f)return;
+    try{
+      var d=JSON.parse(await f.text()),a=Array.isArray(d)?d:(d&&d.hist);if(!Array.isArray(a))throw 0;
+      var ok=a.filter(function(x){return x&&isFinite(x.t)&&isFinite(x.dl)&&x.dl>0&&isFinite(x.ping)}).map(function(x){return{t:+x.t,dl:+x.dl,ping:+x.ping,jit:isFinite(x.jit)?+x.jit:0,tag:typeof x.tag==="string"?x.tag.slice(0,20):"",src:SRCS[x.src]?x.src:"jsd",memo:typeof x.memo==="string"?x.memo.slice(0,40):""}});
+      if(!ok.length)throw 0;
+      var cur=getHist(),seen={},m=[];cur.concat(ok).forEach(function(x){if(!seen[x.t]){seen[x.t]=1;m.push(x)}});
+      m.sort(function(x,y){return y.t-x.t});var added=m.length-cur.length;putHist(m.slice(0,200));hist();
+      $("st").textContent="履歴を読み込みました(新規 "+added+"件)";SFX.ok();
+    }catch(e){$("st").textContent="読み込めませんでした。バックアップ用のJSONファイルを選んでください"}
+  });
+  $("hist").addEventListener("click",function(e){
+    var b=e.target.closest?e.target.closest("button"):null;if(!b||!b.dataset.t)return;
+    var t=+b.dataset.t,hs=getHist();
+    if(b.classList.contains("xx")){putHist(hs.filter(function(x){return x.t!==t}));SFX.off();hist();toast("履歴を削除しました","元に戻す",function(){putHist(hs);hist()});return}
+    var rec=hs.filter(function(x){return x.t===t})[0],mo=b.closest("li").querySelector(".mo");if(!rec)return;
+    var inp=document.createElement("input"),done=false;
+    inp.type="text";inp.maxLength=40;inp.value=rec.memo||"";inp.placeholder="メモ(例: 自室・夜)";inp.setAttribute("aria-label","メモ");
+    inp.style.cssText="width:100%;font:inherit;font-size:12px;padding:3px 6px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink)";
+    mo.textContent="";mo.style.display="block";mo.appendChild(inp);inp.focus();
+    function commit(){if(done)return;done=true;var hh=getHist();hh.forEach(function(x){if(x.t===t)x.memo=inp.value.trim().slice(0,40)});putHist(hh);hist()}
+    inp.addEventListener("blur",commit);
+    inp.addEventListener("keydown",function(k){if(k.key==="Enter")commit();else if(k.key==="Escape"){done=true;hist()}});
+  });
+  try{var pv0=localStorage.getItem("spd_plan");if(pv0)$("plan").value=pv0}catch(e){}
+  $("plan").addEventListener("input",function(){try{localStorage.setItem("spd_plan",this.value)}catch(e){}if(last)renderPlan(last)});
+  function buildUe(){
+    $("uef").innerHTML=USES.map(function(u,i){return'<label style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:3px 0"><span>'+u[0]+'</span><span><input type="number" min="0.1" step="any" data-i="'+i+'" value="'+u[1]+'" style="width:5.5em;font:inherit;padding:3px 6px;border:1px solid var(--line);border-radius:6px;background:var(--sunk);color:var(--ink)"> Mbps</span></label>'}).join("")+'<button class="mini" id="uer" style="margin-top:6px">初期値に戻す</button>';
+  }
+  buildUe();
+  $("uef").addEventListener("input",function(e){
+    var t=e.target;if(t.tagName!=="INPUT")return;var v=parseFloat(t.value);
+    if(v>0&&isFinite(v)){USES[+t.dataset.i][1]=v;saveUses();if(last)renderUse(last)}
+  });
+  $("uef").addEventListener("click",function(e){
+    if(e.target.id!=="uer")return;
+    USES=USES0.map(function(u){return[u[0],u[1]]});saveUses();buildUe();if(last)renderUse(last);
+  });
+  var autoT=0;
+  function schedAuto(){
+    clearTimeout(autoT);autoT=0;var m=parseInt(v("auto"),10)||0,ai=$("ai");
+    if(!m){ai.textContent="";return}
+    var at=new Date(Date.now()+m*60000);
+    ai.textContent="このページを開いている間、"+m+"分ごとに自動測定します(次回 "+pad(at.getHours())+":"+pad(at.getMinutes())+")。測定のたびに通信量がかかります。";
+    autoT=setTimeout(function tick(){if(busy){autoT=setTimeout(tick,30000);return}$("go").click()},m*60000);
+  }
+  $("s_auto").addEventListener("change",schedAuto);
+  $("stp").addEventListener("click",function(){cancel=true;this.style.display="none";$("st").textContent="中止しています…"});
+  $("s_nt").addEventListener("change",function(){
+    if(v("nt")!=="1")return;
+    try{
+      if(!window.Notification){$("st").textContent="このブラウザは通知に対応していません";return}
+      Notification.requestPermission().then(function(p){if(p!=="granted")$("st").textContent="通知が許可されていません。ブラウザの設定を確認してください"}).catch(function(){});
+    }catch(e){}
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.ctrlKey||e.metaKey||e.altKey||document.querySelector("dialog[open]"))return;
+    var t=e.target.tagName;if(t==="INPUT"||t==="SELECT"||t==="TEXTAREA")return;
+    var k=e.key.toLowerCase();if(k==="escape"){if(busy)$("stp").click();return}
+    var m={s:function(){$("go").click()},m:function(){$("mt").click()},t:function(){$("th").click()},c:function(){$("cp").click()},p:function(){if(getHist().length)$("pvb").click()},g:function(){stepGv(1)},"?":function(){$("kbd").showModal()}};if(m[k]){e.preventDefault();m[k]()}
+  });
+  function muteUi(){$("mt").textContent=mute?"効果音 オフ":"効果音 オン";$("mt").setAttribute("aria-pressed",mute?"true":"false")}
+  muteUi();
+  $("mt").addEventListener("click",function(){
+    mute=!mute;try{localStorage.setItem("spd_mute",mute?"1":"0")}catch(e){}
+    muteUi();if(!mute){ac();SFX.tick()}
+  });
+  findIp();
+  $("go").addEventListener("click",async function(){
+    if(busy)return;busy=true;ac();cancel=false;$("stp").style.display="block";
+    var n=parseInt(v("rep"),10)||1;
+    for(var i=0;i<n;i++){
+      if(cancel)break;
+      if(n>1)$("go").textContent="測定中 "+(i+1)+"/"+n;
+      await run();
+      if(i<n-1){$("go").disabled=true;await sleep(1200)}
+    }
+    busy=false;$("stp").style.display="none";schedAuto();
+  });
+  $("s_pd").addEventListener("change",function(){hist()});
+  $("s_un").addEventListener("change",function(){
+    $("ul").textContent=unit()+" ダウンロード";
+    if(last)$("dl").textContent=fmt(last.dl);
+    hist();
+  });
+  $("clr").addEventListener("click",function(){var pv=getHist();try{localStorage.removeItem(KEY)}catch(e){}hist();if(pv.length)toast("履歴を消去しました","元に戻す",function(){putHist(pv);hist()})});
+  $("cp").addEventListener("click",async function(){
+    if(!last)return;
+    var t="回線スピードテスト: DL "+last.dl.toFixed(1)+" Mbps / Ping "+Math.round(last.ping)+" ms / ゆらぎ "+last.jit.toFixed(1)+" ms(目安)";
+    t=L(t);try{await navigator.clipboard.writeText(t);$("st").textContent="結果をコピーしました"}catch(e){$("st").textContent=t}
+  });
+  $("th").addEventListener("click",function(){
+    var d=document.documentElement,a=d.getAttribute("data-theme"),dark=a==="dark"||(a!=="light"&&matchMedia("(prefers-color-scheme:dark)").matches);
+    d.setAttribute("data-theme",dark?"light":"dark");
+  });
+
+  /* ---- share / charts / alerts / UX ---- */
+  var lowN=0,tt=0,wl=null;
+  function hap(p){try{if(!mute&&navigator.vibrate)navigator.vibrate(p)}catch(e){}}
+  function toast(m,a,f){var t=$("toast");t.innerHTML="";var x=document.createElement("span");x.textContent=m;t.appendChild(x);if(a){var b=document.createElement("button");b.textContent=a;b.onclick=function(){t.hidden=true;f()};t.appendChild(b)}t.hidden=false;clearTimeout(tt);tt=setTimeout(function(){t.hidden=true},6000)}
+  function lowTh(){var a=v("alt");if(a==="p50"){var p=getPlan();return p?p*.5:0}if(a==="r30"){var h=getHist().slice(1,11);return h.length>=3?h.reduce(function(s,x){return s+x.dl},0)/h.length*.7:0}return parseInt(a,10)||0}
+  function lowAlert(th){lowN++;var b=$("alb");b.hidden=false;b.textContent="速度低下を検知: "+fmt(last.dl)+" "+unit()+"(しきい値 "+Math.round(th)+" Mbps 未満)"+(lowN>1?"・"+lowN+"回連続":"");hap([200,100,200])}
+  $("alb").addEventListener("click",function(){this.hidden=true});
+  $("s_gv").addEventListener("change",function(){hist()});
+  function stepGv(d){var a=CFG.gv,i=0;a.forEach(function(o,j){if(o[0]===v("gv"))i=j});var n=(i+a.length+d)%a.length,el=$("gv"+n);el.checked=true;el.dispatchEvent(new Event("change",{bubbles:true}))}
+  function cmpRender(h){
+    var g=v("gv"),c=$("cmp"),all=getHist(),now=Date.now(),D=864e5,def="";
+    function av(a){return a.reduce(function(s,x){return s+x.dl},0)/a.length}
+    var w1=all.filter(function(r){return now-r.t<7*D}),w0=all.filter(function(r){return now-r.t>=7*D&&now-r.t<14*D});
+    if(w1.length&&w0.length){var d=(av(w1)/av(w0)-1)*100;def="直近7日の平均 "+fmt(av(w1))+" "+unit()+"(前の7日比 "+(d>=0?"+":"")+d.toFixed(0)+"%)"}
+    $("gr").style.display=g==="tr"?"":"none";
+    if(g==="tr"){c.innerHTML="";$("grr").textContent=def;return}
+    var n=g==="hr"?24:7,a=[],i,W=300/n,nm="日月火水木金土";
+    for(i=0;i<n;i++)a.push({s:0,n:0});
+    h.forEach(function(r){var d=new Date(r.t);var k=g==="hr"?d.getHours():d.getDay();a[k].s+=r.dl;a[k].n++});
+    var v2=a.map(function(x){return x.n?x.s/x.n:0}),mx=Math.max.apply(null,v2)||1,hi=v2.indexOf(mx),lo=-1;
+    v2.forEach(function(x,j){if(x&&(lo<0||x<v2[lo]))lo=j});
+    function lb(j){return g==="hr"?j+"時台":nm.charAt(j)+"曜"}
+    var sv='<svg viewBox="0 0 300 100" role="img" aria-label="'+(g==="hr"?"時間帯別の平均":"曜日別の平均")+'">';
+    v2.forEach(function(x,j){var bh=x?Math.max(3,x/mx*74):1;sv+='<rect x="'+(j*W+2)+'" y="'+(84-bh)+'" width="'+(W-4)+'" height="'+bh+'" rx="2" style="fill:'+(x?"var(--acc)":"var(--line)")+';opacity:'+(j===hi?1:.55)+'" data-l="'+lb(j)+(x?" 平均 "+fmt(x)+" "+unit()+"("+a[j].n+"件)":" データなし")+'"/>';
+      if(g==="wd"||j%6===0)sv+='<text x="'+(j*W+W/2)+'" y="96" text-anchor="middle">'+(g==="hr"?j:nm.charAt(j))+'</text>'});
+    c.innerHTML=sv+"</svg>";
+    $("grr").textContent=lo>=0&&lo!==hi?"最速 "+lb(hi)+" "+fmt(v2[hi])+" / 最遅 "+lb(lo)+" "+fmt(v2[lo])+" "+unit()+(def?"・"+def:""):def;
+  }
+  function tapBar(e){var t=e.target.closest&&e.target.closest("rect");if(!t)return;var l=t.getAttribute("data-l")||(t.querySelector("title")||{}).textContent;if(l)$("grr").textContent=l}
+  var sx=0,sy=0;
+  [$("gr"),$("cmp")].forEach(function(el){el.style.touchAction="pan-y";el.addEventListener("click",tapBar);
+    el.addEventListener("touchstart",function(e){var t=e.touches[0];sx=t.clientX;sy=t.clientY},{passive:true});
+    el.addEventListener("touchend",function(e){var t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*2)stepGv(dx<0?1:-1)},{passive:true})});
+  document.addEventListener("change",function(e){if(PS.indexOf(e.target.name)<0)return;try{var o=JSON.parse(localStorage.getItem(SK)||"{}");o[e.target.name]=e.target.value;localStorage.setItem(SK,JSON.stringify(o))}catch(x){}});
+  function wake(){var on=v("wk")==="1"&&(parseInt(v("auto"),10)||0)>0;if(!on){if(wl){wl.release().catch(function(){});wl=null}return}if(wl||!navigator.wakeLock||document.hidden)return;navigator.wakeLock.request("screen").then(function(l){wl=l;l.addEventListener("release",function(){wl=null})}).catch(function(){})}
+  $("s_wk").addEventListener("change",wake);$("s_auto").addEventListener("change",wake);document.addEventListener("visibilitychange",function(){if(!document.hidden)wake()});
+  function shRec(){return last||getHist()[0]}
+  function shText(r){return L("回線スピードテスト: DL "+r.dl.toFixed(1)+" Mbps / Ping "+Math.round(r.ping)+" ms / ゆらぎ "+(r.jit||0).toFixed(1)+" ms(目安)")}
+  function shUrl(r){return location.href.split("#")[0]+"#r="+[r.dl.toFixed(1),Math.round(r.ping),(r.jit||0).toFixed(1),r.t].join("_")}
+  $("shb").addEventListener("click",function(){if(!shRec())return;$("sh_n").hidden=!navigator.share;$("shd").showModal()});
+  $("shd").addEventListener("click",function(e){
+    if(e.target===this){this.close();return}
+    var b=e.target.closest&&e.target.closest("button"),r=shRec();if(!b||!r)return;
+    var a=b.dataset.a,tx=shText(r),u=shUrl(r);
+    if(a==="z")this.close();
+    else if(a==="n"){navigator.share({title:L("回線スピードテスト"),text:tx,url:u}).catch(function(){});this.close()}
+    else if(a==="x")window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent(tx)+"&url="+encodeURIComponent(u),"_blank","noopener");
+    else if(a==="l")window.open("https://line.me/R/msg/text/?"+encodeURIComponent(tx+"\n"+u),"_blank","noopener");
+    else if(a==="c"){this.close();navigator.clipboard.writeText(u).then(function(){toast("リンクをコピーしました")},function(){toast(u)})}
+    else if(a==="i"){this.close();$("pvb").click()}
+  });
+  (function(){var m=/^#r=([\d.]+)_(\d+)_([\d.]+)_(\d+)$/.exec(location.hash);if(!m)return;var b=$("sb");b.textContent="共有された結果: DL "+m[1]+" Mbps / Ping "+m[2]+" ms / ゆらぎ "+m[3]+" ms("+stamp(+m[4])+")";b.hidden=false;b.title="タップで閉じる";b.onclick=function(){b.hidden=true}})();
+  $("kbb").addEventListener("click",function(){$("kbd").showModal()});
+  $("kbc").addEventListener("click",function(){$("kbd").close()});
+  $("kbd").addEventListener("click",function(e){if(e.target===this)this.close()});
+  var fab=$("fab"),go=$("go");
+  function fabSync(){fab.textContent=go.textContent;fab.disabled=go.disabled}
+  new MutationObserver(fabSync).observe(go,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:["disabled"]});fabSync();
+  fab.addEventListener("click",function(){go.click()});
+  if(window.IntersectionObserver)new IntersectionObserver(function(en){fab.classList.toggle("on",!en[0].isIntersecting)}).observe(go);
+
+  /* ---- language (ja / en) ---- */
+  var LANG="ja",TEN="Internet Speed Test | Measure Ping and Download Speed for Free",MD0="";
+  try{if(localStorage.getItem("spd_lang")==="en")LANG="en"}catch(e){}
+  var PH={
+"共有された結果":"Shared result","端末の共有メニュー":"Share via device","Xに投稿":"Post on X","LINEで送る":"Send via LINE","リンクをコピーしました":"Link copied","リンクをコピー":"Copy link","画像・PDFで保存":"Save as image / PDF","共有":"Share","履歴を削除しました":"Entry deleted","履歴を消去しました":"History cleared","元に戻す":"Undo","速度低下を検知":"Slow speed detected","回連続":" in a row","しきい値":"threshold","タップで閉じる":"Tap to close","グラフ表示":"Chart view","定期測定中に画面を消さない":"Keep screen on during auto tests","画面維持":"Keep screen on","契約50%":"50% of plan","平均-30%":"Avg −30%","ショートカット一覧":"Keyboard shortcuts","効果音のオン/オフ":"Sound on/off","テーマ切替":"Toggle theme","グラフ切替":"Switch chart","この一覧":"This list","最速":"Fastest","最遅":"Slowest","直近7日の平均":"Last 7 days avg","前の7日比":"vs prior 7 days","時間帯別の平均":"Average by time of day","曜日別の平均":"Average by weekday","時台":":00s","データなし":"No data",
+"回線スピードテスト レポート":"Internet Speed Test Report","回線スピードテスト: DL ":"Internet Speed Test: DL ","回線スピードテスト":"Internet Speed Test",
+"「測定を開始」を押してください":"Press “Start test” to begin","測定を開始":"Start test","もう一度測定":"Test again","測定を中止しました":"Test cancelled","中止しています…":"Cancelling…","測定を中止":"Cancel test",
+"IPアドレスを含める":"Include IP address","IPアドレス":"IP address","取得中…":"Loading…","取得できませんでした":"Unavailable","ipinfo.ioで調べる":"Look up on ipinfo.io","非対応のブラウザ":"Unsupported browser",
+"PDF・プレビュー":"PDF / Preview","PDFプレビュー":"PDF preview","PDFを保存しました":"PDF saved","PDFを保存":"Save PDF","PDFを作成中…":"Creating PDF…","PDFを作成できませんでした。もう一度お試しください。":"Could not create the PDF. Please try again.","保存をキャンセルしました":"Save cancelled","キャンセルしました":"Cancelled",
+"画像で保存":"Save as image","画像を作成中…":"Creating image…","画像を保存しました":"Image saved","画像を作成できませんでした。もう一度お試しください。":"Could not create the image. Please try again.",
+"印刷ダイアログで「PDFに保存」を選ぶとPDFにできます":"Choose “Save as PDF” in the print dialog to get a PDF.","この環境では印刷を開始できませんでした。":"Printing could not be started in this environment.",
+"結果をコピーしました":"Result copied","結果をコピー":"Copy result","(目安)":"(estimate)",
+"測定すると、用途の目安とダウンロード時間がここに表示されます。":"Run a test to see what your speed is good for and estimated download times.",
+"CSVで保存":"Save CSV","履歴を消去":"Clear history","バックアップ書き出し":"Export backup","履歴を含める":"Include history",
+"CSVを保存しました":"CSV saved","CSVを保存できませんでした":"Could not save CSV","保存できる履歴がありません":"No history to save","書き出せる履歴がありません":"No history to export",
+"バックアップを書き出しました":"Backup exported","バックアップを保存できませんでした":"Could not save the backup","履歴を読み込みました(新規":"History imported (new","読み込めませんでした。バックアップ用のJSONファイルを選んでください":"Could not import. Choose a backup JSON file.",
+"履歴はまだありません。測定すると自動で保存されます。":"No history yet. Results are saved automatically after each test.","この期間の履歴はありません。":"No history in this period.","(日ごとの平均を表示)":"(daily averages)","メモを編集":"Edit memo","この履歴を削除":"Delete this entry","メモ(例: 自室・夜)":"Memo (e.g. Living room, night)",
+"回線速度テストのよくある質問":"Speed test FAQ","Pingとは何ですか?":"What is Ping?",
+"通信の応答時間(ミリ秒)です。小さいほど反応が速く、オンラインゲームやビデオ会議の快適さに影響します。ゆらぎは、Pingのばらつきを表します。":"Ping is the response time of your connection in milliseconds. Lower is faster and affects how smooth online games and video calls feel. Jitter is the variation in ping.",
+"測定値が実際の回線速度と違うのはなぜですか?":"Why does the result differ from my actual line speed?",
+"このツールはCDNのファイルの読み込み時間から求める目安値です。Wi-Fiの電波状況、同時に使っている端末、時間帯、測定先のサーバーによって差が出ます。":"This tool estimates speed from how long CDN files take to load. Results vary with Wi-Fi signal, other devices in use, time of day and the test server.",
+"測定するときのコツはありますか?":"Any tips for testing?",
+"ほかのダウンロードや動画視聴を止め、ルーターの近くで、時間をあけて複数回測定すると安定した値が得られます。「精密」モードや連続測定も使えます。":"Stop other downloads and video streaming, stay near the router and test several times at different moments for stable values. The “Precise” mode and repeat tests can help.",
+"速度はどれくらいあれば十分ですか?":"How much speed is enough?",
+"目安は、10 Mbps以上でHD動画とビデオ会議、25 Mbps以上で4K動画やオンラインゲーム、100 Mbps以上で大容量ダウンロードや複数人での同時利用です。":"As a guide: 10 Mbps or more for HD video and video calls, 25 Mbps or more for 4K video and online games, and 100 Mbps or more for large downloads and multiple people at once.",
+"CDN(jsDelivr・cdnjs)のファイルの読み込み速度から求めた値(中央値)です。":"Values (median) are calculated from the load speed of CDN files (jsDelivr / cdnjs). ",
+"測定では通信量を数十MB使うため、モバイル回線では注意してください。":"Each test uses tens of MB of data, so be careful on mobile connections. ",
+"アップロード速度は測定できません。":"Upload speed cannot be measured. ","ショートカット:":"Shortcuts:","Sキーで測定開始、Mキーで効果音のオン/オフ。":"S to start a test, M to toggle sound.",
+"テーマを切り替える":"Toggle theme","速度低下の警告しきい値(Mbps)":"Slow-speed alert threshold (Mbps)","完了・警告の通知":"Completion and alert notifications","目標速度(Mbps)":"Target speed (Mbps)","契約速度(Mbps)":"Plan speed (Mbps)","契約速度":"Plan speed","例:":"e.g.",
+"メールや軽いWebページ向けです。動画は途切れやすくなります。":"Fine for email and light web pages. Video may stutter.","SD画質の動画や音声通話に十分です。":"Enough for SD video and voice calls.","HD動画の視聴やビデオ会議ができます。":"HD video and video calls work well.","4K動画やオンラインゲームも楽しめます。":"4K video and online games are fine too.","大容量のダウンロードや複数人での同時利用も快適です。":"Comfortable even for large downloads and several people at once.",
+"応答は非常に良好":"Excellent response time","応答はやや遅め":"Slightly slow response time","応答は良好":"Good response time",
+"動画 100MB":"Video 100MB","4K動画":"4K video","SD動画":"SD video","HD動画":"HD video","ビデオ会議":"Video calls","ライブ配信":"Live streaming","オンラインゲーム":"Online gaming","大容量ダウンロード":"Large downloads",
+"(Pingが高め)":"(high ping)","(遅延・ゆらぎに注意)":"(watch latency and jitter)","用途別の判定(必要速度の目安)":"Suitability by use (required speed)","用途別の判定":"Suitability by use","用途別の必要速度を編集":"Edit required speeds","初期値に戻す":"Reset to defaults",
+"ダウンロード時間の目安":"Estimated download time","ダウンロード速度を測定中":"Measuring download speed","ダウンロード":"Download",
+"応答時間(Ping)を測定中":"Measuring response time (Ping)","接続を準備中(ウォームアップ)":"Warming up the connection","測定が完了しました":"Test complete","中央値":"median","ばらつき":"range","一部推定":"partly estimated",
+"測定に失敗しました。接続を確認して、もう一度お試しください。":"The test failed. Check your connection and try again.","測定中…":"Testing…","測定中":"Testing",
+"速度低下:":"Slow speed:","速度低下: ":"Slow speed: ","測定完了: ":"Test complete: ","設定した":"Below your","を下回っています":"threshold","(しきい値":"(threshold","未満":"under",
+"このページを開いている間、":"While this page is open, a test runs every ","分ごとに自動測定します(次回":" min (next",")。測定のたびに通信量がかかります。":"). Each test uses data.",
+"このブラウザは通知に対応していません":"This browser does not support notifications","通知が許可されていません。ブラウザの設定を確認してください":"Notifications are not allowed. Check your browser settings.",
+"の達成率":"reached","(ベストエフォートの目安)":"(best-effort estimate)","達成率":"achievement","測定履歴(直近":"History (last ","(過去":"(past ",
+"CDNのファイルの読み込み時間から求めた目安値です。実際の回線速度とは差が出ることがあります。":"Estimated from CDN file load times. Actual line speed may differ.","評価:":"Rating:",
+"アドバイス":"Advice","遅延が大きめです":"Latency is high","Pingやゆらぎが高い状態です。ビデオ会議やゲームでは、有線LANへの切り替え、ルーターの再起動、ルーターの近くでの利用を試してください。":"Ping or jitter is high. For video calls and games, try wired LAN, restart the router, or move closer to it.",
+"用途に対して速度が不足しています":"Speed is short for some uses","不足している用途:":"Not enough for:","同時に使う端末やアプリを減らすか、回線プランの見直しを検討してください。":"Use fewer devices and apps at once, or consider a faster plan.",
+"契約速度に届いていません":"Below your plan speed","測定値は契約速度の":"Your result is ","%です。":"% of your plan speed. ","有線接続での再測定、ルーターの再起動、時間帯を変えた測定を試してください。それでも低い場合は、事業者への相談やIPv6(IPoE)対応の回線が有効です。":"Retest over wired, restart the router, and test at different times. If it stays low, contact your ISP or consider an IPv6 (IPoE) line.",
+"Wi-Fiを見直しましょう":"Check your Wi-Fi","5GHz帯(またはWi-Fi 6以降)に接続し、ルーターとの間の障害物を減らしてください。有線接続でも測ると、Wi-Fiが原因か切り分けられます。":"Connect on 5 GHz (or Wi-Fi 6+) and reduce obstacles to the router. Testing over wired shows whether Wi-Fi is the cause.",
+"モバイル回線は場所や時間で変わります":"Mobile speed varies by place and time","電波の強い場所へ移動するか、Wi-Fiへの切り替えを検討してください。混雑する時間帯を避けると改善することがあります。":"Move to a spot with a stronger signal or switch to Wi-Fi. Avoiding busy hours can help.",
+"夜の速度が落ちる傾向があります":"Speed drops in the evening","夜間の平均は、それ以外の時間帯より":"Your evening average is ","%低くなっています。回線が混み合う時間帯の影響かもしれません。IPv6(IPoE)接続への切り替えも検討してください。":"% lower than at other times. This may be network congestion; consider switching to IPv6 (IPoE).",
+"問題は見当たりません":"No issues found","現在の速度・応答とも良好です。さらに安定させるなら、ルーターの設置場所や定期的な再起動を見直してみてください。":"Speed and response both look good. For extra stability, review router placement and restart it periodically."
+  };
+  var EX={"推移":"Trend","24時間":"24 h","曜日":"Weekday","3時間":"3 h","日曜":"Sun","月曜":"Mon","火曜":"Tue","水曜":"Wed","木曜":"Thu","金曜":"Fri","土曜":"Sat","効果音":"Sound","オン":"On","オフ":"Off","ライト":"Light","ダーク":"Dark","端末推定":"Device est.","接続情報":"Connection info","非表示":"Hide","表示":"Show","回線種別の推定":"Est. connection type","回線事業者":"ISP","設定":"Settings","測定モード":"Test mode","接続の種類":"Connection type","連続測定":"Repeat","表示単位":"Display unit","測定先":"Test server","自動測定":"Auto test","低下警告":"Slow alert","通知":"Notify","目標速度":"Target speed","結果":"Results","測定履歴":"History","閉じる":"Close","印刷":"Print","読み込み":"Import","簡易":"Quick","標準":"Standard","精密":"Precise","モバイル":"Mobile","有線":"Wired","その他":"Other","併用":"Both","全期間":"All time","なし":"None","測定":"Test","表示期間":"Period","ゆっくり":"Slow","快適":"Good","高速":"Fast","超高速":"Very fast","不足":"Low","ぎりぎり":"Borderline","朝":"Morning","昼":"Day","夜":"Evening","深夜":"Night","メモ":"Memo","ゆらぎ":"Jitter","測定日時":"Measured","測定条件":"Test conditions","目標":"Target","達成":"Met","未達":"Missed","日時":"Date","アプリ":"App","ゲーム":"Game","動画":"video","ラウンド別の速度":"Speed per round","速度の推移":"Speed trend","最高":"Max","平均":"Avg","時間帯別の平均":"Average by time of day","前回比":"vs last","平均比":"vs avg","前回":"last","履歴":"history","測定完了":"Test complete","速度低下":"Slow speed"};
+  var RX=[[/約(\d+)時間(\d+)分/g,"~$1 h $2 min"],[/約(\d+)時間/g,"~$1 h"],[/約(\d+)分/g,"~$1 min"],[/約(\d+)秒/g,"~$1 s"],[/^(\d+)回$/,"$1×"],[/^(\d+)分$/,"$1 min"],[/^(\d+)時間$/,"$1 h"],[/^(\d+)日$/,"$1 days"],[/(\d+)回目 /g,"Round $1: "],[/(\d+)–(\d+)時/g,"$1–$2h"],[/\(過去(\d+)件の平均 /g,"(avg of last $1: "],[/(\d+)件/g,"$1 items"]];
+  var PR=new RegExp(Object.keys(PH).sort(function(a,b){return b.length-a.length}).map(function(s){return s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}).join("|"),"g");
+  var JR=/[\u3040-\u30ff\u3400-\u9fff]/,JRG=/[\u3040-\u30fa\u30fc-\u30ff\u3400-\u9fff]+/g,AT=["aria-label","title","placeholder"],OT=new WeakMap(),OA=new WeakMap();
+  function tr(s){
+    var x=s.replace(/（/g,"(").replace(/）/g,")").replace(/：/g,":").replace(/？/g,"?").replace(/！/g,"!");
+    RX.forEach(function(p){x=x.replace(p[0],p[1])});
+    x=x.replace(PR,function(m){return PH[m]});
+    x=x.replace(JRG,function(m){return EX[m]||m});
+    return x.replace(/・/g," · ").replace(/、/g,", ").replace(/。/g,". ").replace(/〜/g,"–").replace(/「/g,"“").replace(/」/g,"”").replace(/ {2,}/g," ");
+  }
+  function L(s){return LANG==="en"?tr(s):s}
+  function skip(n){var t=n.nodeName;return t==="SCRIPT"||t==="STYLE"?2:1}
+  function tnode(n){var v=n.nodeValue;if(!JR.test(v))return;var e=tr(v);if(e!==v){OT.set(n,{ja:v,en:e});n.nodeValue=e}}
+  function tattr(el,a){var v=el.getAttribute(a);if(!v||!JR.test(v))return;var e=tr(v),m=OA.get(el)||{};m[a]={ja:v,en:e};OA.set(el,m);el.setAttribute(a,e)}
+  function walk(root){
+    if(root.nodeType===3){tnode(root);return}
+    if(root.nodeType!==1||root.nodeName==="SCRIPT"||root.nodeName==="STYLE")return;
+    var w=document.createTreeWalker(root,5,{acceptNode:skip}),n=root;
+    do{if(n.nodeType===3)tnode(n);else AT.forEach(function(a){tattr(n,a)})}while((n=w.nextNode()));
+  }
+  function toJa(){
+    var w=document.createTreeWalker(document.body,5,{acceptNode:skip}),n;
+    while((n=w.nextNode())){
+      if(n.nodeType===3){var o=OT.get(n);if(o&&n.nodeValue===o.en)n.nodeValue=o.ja}
+      else{var m=OA.get(n);if(m)Object.keys(m).forEach(function(a){if(n.getAttribute(a)===m[a].en)n.setAttribute(a,m[a].ja)})}
+    }
+  }
+  var MO=new MutationObserver(function(ms){
+    if(LANG!=="en")return;
+    ms.forEach(function(m){if(m.type==="characterData")tnode(m.target);else if(m.type==="attributes")tattr(m.target,m.attributeName);else m.addedNodes.forEach(walk)});
+  });
+  MO.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:AT});
+  function setLang(l){
+    LANG=l;try{localStorage.setItem("spd_lang",l)}catch(e){}
+    document.documentElement.lang=l;
+    var md=document.querySelector('meta[name="description"]');if(md&&!MD0)MD0=md.getAttribute("content");
+    if(l==="en"){walk(document.body);document.title=TEN;if(md)md.setAttribute("content","Measure your download speed, ping and jitter in the browser. See what your line is good for and keep a test history.")}
+    else{toJa();document.title=T0;if(md&&MD0)md.setAttribute("content",MD0)}
+    $("lg").textContent=l==="en"?"日本語":"English";
+  }
+  $("lg").addEventListener("click",function(){setLang(LANG==="en"?"ja":"en")});
+  if(LANG==="en")setLang("en");
+})();
+</script>
+<script>
+if("serviceWorker" in navigator&&(location.protocol==="https:"||location.hostname==="localhost"||location.hostname==="127.0.0.1")){
+  window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})});
+}
+</script>
+<script>
+(function(){
+  var b=document.getElementById("boot");if(!b)return;
+  var t0=Date.now(),done=false,MIN=900,MAX=6000;
+  function hide(){
+    if(done)return;done=true;
+    var w=Math.max(0,MIN-(Date.now()-t0));
+    setTimeout(function(){
+      b.classList.add("off");
+      b.setAttribute("aria-busy","false");
+      setTimeout(function(){if(b.parentNode)b.parentNode.removeChild(b)},500);
+    },w);
+  }
+  if(document.readyState==="complete")hide();else window.addEventListener("load",hide);
+  setTimeout(hide,MAX);
+})();
+</script>
+</body>
+</html>
